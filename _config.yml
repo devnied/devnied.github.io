@@ -1,0 +1,7 @@
+url: http://loclahost:4000/
+markdown: redcarpet
+pygments: true
+permalink: pretty
+title: Julien MILLAU
+safe: true
+lsi: false

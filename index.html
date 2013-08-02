@@ -1,0 +1,15 @@
+---
+layout: default
+img: /css/img/road.jpg
+copy: mischiru
+sepStyle: road
+subtitle: Articles
+---
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+      	<a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>

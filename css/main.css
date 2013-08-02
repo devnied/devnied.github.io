@@ -1,0 +1,336 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+::selection {
+	background-color: #2B2B2B;
+	color: #eee;
+}
+
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('font/MonoSocialIconsFont-1.10.eot');
+    src: url('font/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('font/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('font/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('font/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+					
+
+/*****************************************************************************/
+/*
+/* Header
+/*
+/*****************************************************************************/
+
+header{
+	margin: 100px 0 35px 0;
+}
+
+.name a{
+	font-size: 30px;
+	font-weight: 100; 
+}
+
+header a, header b{
+	color: #444;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.25s ease-in;
+	-webkit-transition: color 0.25s ease-in;
+}
+
+header a:hover, header a:hover b {
+	color: #307EA9;
+}
+
+header a.active{
+	color: #307EA9;
+}
+
+nav{
+	width: 650px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.menu {
+	padding: 0;
+	margin: 5px 0;
+	font-weight: 100;
+}
+
+.menu li {
+	display: inline;
+	padding-right: 15px;
+}
+
+li {
+	padding: 0;
+	list-style-type: none;
+	font-size: 17px;
+	margin-left: 0;
+	line-height: 160%;
+}
+
+.social {
+	margin: -37px 0 0 0;
+	padding: 0;
+	padding-top: 2px;
+	float: right;
+}
+
+.social li {
+	display: inline;
+}
+
+.social li a{
+	font-size: 25px;
+}
+
+footer{
+	padding: 60px 0;
+	border-top: 1px solid #eee;
+	color: #eee;
+	text-align: center;
+	width: 650px;
+	margin: 40px auto 40px auto; 
+}
+
+/*****************************************************************************/
+/*
+/* Content
+/*
+/*****************************************************************************/
+
+.separator {
+	background-color: #2B2B2B;
+	background-size: 100% ;
+	height: 200px;
+	box-shadow: inset 0 0 15px rgba(0,0,0,.6);
+}
+
+.separator.road{
+	background-position-y: 61%;
+}
+
+
+.separator.project{
+	background-position: center;
+	background-size: auto;
+}
+
+.separator.contact{
+	background-position-y: 94%;
+}
+
+.separator.apropos{
+	background-position-y: 49%;
+}
+
+.author{
+	color:#fff;
+	float: right;
+	margin-top: 181px;
+	font-size: 10px;
+	margin-right: 5px;
+}
+
+.container {
+	width: 650px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 24px;
+	margin: 30px 0 30px -27px;
+	padding: 10px 0 10px 23px;
+	border-left: 5px solid #eee;
+	font-weight: 300;
+	color: #444;
+}
+
+.posts li a, .posts li a:visited{
+	color: #307EA9;
+	text-decoration:none;
+	font-weight: 300;
+}
+
+.contact-list{
+	text-align:center;
+}
+
+.contact-list a{
+	font-size:17px;
+	text-decoration:none;
+	color: #444;
+	line-height: 300%;
+	white-space: nowrap;
+	transition: color 0.25s ease-in;
+	-webkit-transition: color 0.25s ease-in;
+}
+
+.contact-list a:hover{
+	color: #307EA9;
+}
+
+.contact-list a .symbol{
+	font-size:50px;
+	vertical-align: top;
+	margin-right:15px;
+}
+
+.contact-list li{
+	display: inline-table;
+	width: 26%;
+	margin-right:10px;
+	
+}
+
+/*****************************************************************************/
+/*
+/* Mobile
+/*
+/*****************************************************************************/
+
+@media only screen 
+and (max-width : 600px) {
+	
+	.social {
+		position:absolute;
+		top :58px;
+		right : 10px;
+	}
+	
+	.separator {
+		height: 80px;
+	}
+	
+	.menu li {
+		padding-right: 10px;
+	}
+	
+	.menu{
+		text-align:center;
+	}
+	
+	.social li:last-child {
+		display: none;
+	}
+	
+	.contact-list{
+		text-align:left;
+		margin-left:30%;
+	}
+	
+	.contact-list li{
+		display: block;
+		width:auto;
+	}
+	
+	.contact-list li a{
+		display: block;
+		overflow: hidden;
+	}
+	
+	
+}
+
+
+@media only screen 
+and (max-width : 1024px){
+
+	header{
+		margin: 18px 0 15px 0;
+	}
+
+	nav{
+		width: auto;
+	}
+	
+	.separator {
+		height: 100px;
+	}
+	
+	.container {
+		width: auto;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	h1 {
+		margin: 19px 0 20px 6px;
+		padding: 5px 0 5px 13px;
+	}
+	
+	footer{
+		width: auto;
+	}
+
+}
+
+
+
+
