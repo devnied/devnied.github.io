@@ -11,6 +11,6 @@ $(function(){
 		$("body").scrollTop(1);
 	}
 	
-	$(".mail").attr("href","mailto:mxjulien@gmail.com");
+	$(".mail").attr("href","mai"+"lto"+":mx"+"julien"+"@"+"gmail"+"."+"com");
 
 });
