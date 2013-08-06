@@ -346,6 +346,17 @@ p {
 	width: 100%;
 }
 
+.timeslot p.content{
+	margin-bottom: 0;
+}
+
+.timeslot p.skill{
+	margin-top: 0;
+	font-weight: 300;
+	font-style: italic;
+	color: #999;
+}
+
 .even {
 	float: right;	
 	padding: 10px 0 0 100px;
