@@ -1,7 +1,9 @@
 $(function(){
+	// define reverse jquery function
+	jQuery.fn.reverse = [].reverse;
 
-	$(".menu a").each(function(){
-		if (window.location.pathname ==  $(this).attr('href') ){
+	$(".menu a").reverse().each(function(){
+		if (window.location.pathname.match("^"+$(this).attr('href')) ){
 			$(this).addClass("active");
 			return false;
 		}
