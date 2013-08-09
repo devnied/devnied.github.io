@@ -13,6 +13,11 @@ $(function(){
 		$("body").scrollTop(1);
 	}
 	
+	// Email
 	$(".mail").attr("href","mai"+"lto"+":mx"+"julien"+"@"+"gmail"+"."+"com");
+	
+	$( ".back" ).click(function() {
+	  window.history.back();
+	});
 
 });

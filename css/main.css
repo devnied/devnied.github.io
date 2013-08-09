@@ -31,6 +31,11 @@ video {
   display: inline-block;
 }
 
+code{
+	display: block;
+	overflow: scroll;
+}
+
 html, body { 
 	height: 100%;
 }
@@ -76,8 +81,7 @@ a.symbol:before {
     content: attr(title);
     margin-right: 0.3em;
     font-size: 130%;
-}
-					
+}		
 
 /*****************************************************************************/
 /*
@@ -175,6 +179,7 @@ footer a{
 .separator {
 	background-color: #2B2B2B;
 	background-size: 100% ;
+	background-position-y:bottom;
 	height: 200px;
 	box-shadow: inset 0 0 15px rgba(0,0,0,.6);
 }
@@ -223,17 +228,44 @@ h1 {
 h2 {
 	font-size: 1.8em;
 	margin: 20px 0;
+	font-weight: 500;
 }
 
 h3 {
 	font-size: 1.3em;
 	margin: 8px 0;
+	font-weight: 400;
 }
 
 .posts li a, .posts li a:visited{
 	color: #307EA9;
 	text-decoration:none;
 	font-weight: 300;
+}
+
+.post a{
+	text-decoration: none;
+	color: #888;
+	font-style: oblique;
+}
+
+.post a:hover{
+	text-decoration: underline;
+}
+
+.post li{
+	list-style-type: square;
+	font-size: 1.1em;
+	margin-left: 40px;
+}
+
+.back{
+	cursor:pointer;
+	opacity:0.3;
+}
+
+.back:hover{
+	opacity:1;
 }
 
 /** CONTACT **/

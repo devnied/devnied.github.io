@@ -5,13 +5,20 @@
     </head>
     <body>
 		{% include nav.html %}
-		<div class="separator {{ page.sepStyle }}" style="background-image:url({{ page.img }})">
-			{% if page.copy %}
-				<div class="author">&copy;{{ page.copy }}</div>
-			{% endif %}
-		</div>
+		{% if page.img %}
+			<div class="separator {{ page.sepStyle }}" style="background-image:url({{ page.img }})">
+				{% if page.copy %}
+					<div class="author">&copy;{{ page.copy }}</div>
+				{% endif %}
+			</div>
+		{% endif %}
 		<section class="container">
-		  		<h1>{{ page.title }} {{ page.subtitle }}</h1>
+		  		<h1>
+		  			{% if page.back %}
+		  				<span class="back"><-</span>
+		  			{% endif %}
+		  			{{ page.title }} {{ page.subtitle }}
+		  		</h1>
 				{{ content }}
   		</section>
 		{% include footer.html %}
