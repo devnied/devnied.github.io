@@ -235,12 +235,17 @@ h3 {
 	font-size: 1.3em;
 	margin: 8px 0;
 	font-weight: 400;
+	text-decoration:underline;
 }
 
 .posts li a, .posts li a:visited{
 	color: #307EA9;
 	text-decoration:none;
 	font-weight: 300;
+}
+
+.posts li{
+	font-size: 1.4em;
 }
 
 .post a{

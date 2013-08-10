@@ -20,9 +20,7 @@ $(function(){
 	$(".mail").attr("href","mai"+"lto"+":mx"+"julien"+"@"+"gmail"+"."+"com");
 	
 	$( ".back" ).click(function() {
-		if (selected){
-	  		window.location = selected.attr('href');
-	  	}
+	  	window.location = selected.attr('href');
 	});
 
 });
