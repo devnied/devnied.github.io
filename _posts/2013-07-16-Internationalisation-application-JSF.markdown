@@ -3,7 +3,7 @@ layout: post
 title:  "Internationalisation d’une application JSF"
 date:   2013-07-16 00:13:37
 categories: articles
-img: /images/cover/internationalisation.jpg
+img: /images/Internationalisation-JSF/cover.jpg
 ---
 
 ##Introduction
@@ -19,8 +19,9 @@ La langue du visiteur se retrouve codée :<br/>
 En JEE, il existe des mécanismes permettant à une application de s’adapter à la langue du visiteur appelés i18n (il y a 18 lettre entre le i et le n de internationalisation)
 ##Implémentation de i18n en JSF
 Tout d’abord, il est nécessaire de créer les fichiers .properties contenant les messages dans les différentes langues.<br/>
-<br/>
-On nomme en général les fichiers sous la forme « messages_<LANG>.properties ».<br/> Ces fichiers contiennent sur chaque ligne une clé et une valeur. La clé doit être identique pour chaque fichier properties, seul la valeur change en fonction de la langue.<br/>
+<img src="/images/Internationalisation-JSF/struct.png" />
+On nomme en général les fichiers sous la forme « messages`_<LANG>`.properties ».<br/>
+Ces fichiers contiennent sur chaque ligne une clé et une valeur. La clé doit être identique pour chaque fichier properties, seul la valeur change en fonction de la langue.<br/>
 <br/>
 Exemple du fichier message_fr.properties
 {% highlight properties %}
