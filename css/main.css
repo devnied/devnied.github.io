@@ -182,6 +182,7 @@ footer a{
 	background-position-y:bottom;
 	height: 200px;
 	box-shadow: inset 0 0 15px rgba(0,0,0,.6);
+	background-repeat: no-repeat;
 }
 
 .separator.road{
@@ -439,58 +440,6 @@ p {
 /*****************************************************************************/
 
 @media only screen 
-and (max-width : 600px) {
-	
-	.social {
-		position:absolute;
-		top :58px;
-		right : 10px;
-	}
-	
-	.separator {
-		height: 80px;
-	}
-	
-	.menu li {
-		padding-right: 10px;
-	}
-	
-	.menu{
-		text-align:center;
-	}
-	
-	.social li:last-child {
-		display: none;
-	}
-	
-	.contact-list{
-		text-align:left;
-		margin-left:30%;
-	}
-	
-	.contact-list li{
-		display: block;
-		width:auto;
-	}
-	
-	.contact-list li a{
-		display: block;
-		overflow: hidden;
-	}
-	
-	.timeslot{
-		width:auto;
-	}
-	
-	.posts{
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-	
-}
-
-
-@media only screen 
 and (max-width : 1024px){
 
 	header{
@@ -527,6 +476,57 @@ and (max-width : 1024px){
 	
 	footer{
 		width: auto;
+	}
+	
+}
+
+@media only screen 
+and (max-width : 600px) {
+	
+	.social {
+		position:absolute;
+		top :58px;
+		right : 10px;
+	}
+	
+	.separator {
+		height: 70px;
+	}
+	
+	.menu li {
+		padding-right: 10px;
+	}
+	
+	.menu{
+		text-align:center;
+	}
+	
+	.social li:last-child {
+		display: none;
+	}
+	
+	.contact-list{
+		text-align:left;
+		margin-left:30%;
+	}
+	
+	.contact-list li{
+		display: block;
+		width:auto;
+	}
+	
+	.contact-list li a{
+		display: block;
+		overflow: hidden;
+	}
+	
+	.timeslot{
+		width:auto;
+	}
+	
+	.posts{
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	
 }
