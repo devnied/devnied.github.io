@@ -25,6 +25,16 @@ bit.setNextInteger(1,5); // set one value on 5 bits
 // Result
 bit.getData();      // return 0x61  (0110 0001b)
 {% endhighlight %}
+
+##Maven
+{% highlight xml %}
+<dependency>
+  <groupId>com.github.devnied</groupId>
+  <artifactId>bit-lib4j</artifactId>
+  <version>1.4.1</version>
+</dependency>
+{% endhighlight %}
+
 ##Liens Utiles
 Adresse du projet: [https://github.com/devnied/Bit-lib4j]<br/>
 Wiki : [https://github.com/devnied/Bit-lib4j/wiki]

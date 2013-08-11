@@ -234,7 +234,7 @@ h2 {
 h3 {
 	font-size: 1.3em;
 	margin: 8px 0;
-	font-weight: 400;
+	font-weight: 300;
 	text-decoration:underline;
 }
 
@@ -246,6 +246,7 @@ h3 {
 
 .posts li{
 	font-size: 1.4em;
+	line-height: 190%;
 }
 
 .post a{
@@ -270,6 +271,7 @@ h3 {
 	margin: 8px auto;
 	border: 1px solid #CCC;
 	border-radius: 3px;
+	max-width: 100%;
 }
 
 .back{
@@ -349,7 +351,7 @@ p {
 
 
 .timeslot {
-	width: 268px;
+	width: 320px;
 	float: left;
 	margin: 0 0 10px;
 	padding: 10px 100px 0 0;
