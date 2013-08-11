@@ -8,7 +8,7 @@ copy: echiner1
 ---
 
 ##Introduction
-Pour sécuriser une application JSF sans utiliser d’autres frameworks tel que Spring ou Struts qui intègrent un module de sécurité ( Spring Sécurity pour Spring), on peut utiliser Realm.<br/><br/>
+Pour sécuriser une application JSF sans utiliser d’autres frameworks tel que Spring ou Struts qui intègrent un module de sécurité (Spring Sécurity pour Spring), on peut utiliser Realm.<br/><br/>
 Realm est un mécanisme servant à identifier les utilisateurs. Il permet de vérifier le login et le mot de passe d’un utilisateur afin de savoir si l’utilisateur connecté possède les droits suffisants pour consulter la ressource demandée.<br/><br/>
 Pour chaque utilisateur, Realm connait la liste des rôles(Autorisations) associés à un utilisateur. La protection des ressources se fait par rôle, on indique le rôle dont doit disposer un utilisateur pour accéder à la ressource.
 ##Modes de fonctionnement de Realm
@@ -35,8 +35,8 @@ Pour cela:
 Interface d'administration de GlassFish > Configurations > Server-config
 > security > Realms > File (Dans notre cas)
 {% endhighlight %}
-Si le Realm n’existe pas, cliquer sur <new> afin de créer celui souhaité (FileRealm, JDBCRealm, LDAPRealm)
-Ensuite, il est nécessaire d’ajouter les utilisateurs. Cliquer sur <Manage users> puis sur <New>.
+Si le Realm n’existe pas, cliquer sur `<new>` afin de créer celui souhaité (FileRealm, JDBCRealm, LDAPRealm)
+Ensuite, il est nécessaire d’ajouter les utilisateurs. Cliquer sur `<Manage users>` puis sur `<New>`.
 Remplissez les champs de l’utilisateur nom, mot de passe ainsi que les rôles de celui-ci
 exemple:
 {% highlight xml %}

@@ -16,7 +16,7 @@ La langue du visiteur se retrouve codée :<br/>
 + en_US pour les USA
 + en_UK pour la Grande Bretagne
 
-En JEE, il existe des mécanismes permettant à une application de s’adapter à la langue du visiteur appelés i18n (il y a 18 lettre entre le i et le n de internationalisation)
+En JEE, il existe des mécanismes permettant à une application de s’adapter à la langue du visiteur appelés i18n (il y a 18 lettres entre le i et le n de internationalisation)
 ##Implémentation de i18n en JSF
 Tout d’abord, il est nécessaire de créer les fichiers .properties contenant les messages dans les différentes langues.<br/>
 <img src="/images/Internationalisation-JSF/struct.png" />
