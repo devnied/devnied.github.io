@@ -23,11 +23,15 @@ $(function(){
 	  	window.location = selected.attr('href');
 	});
 	
-	$("a").click(function (event) {
-        if ( navigator.standalone && $(this).attr("href").indexOf("/") == 0) {
-            event.preventDefault();
-            window.location = $(this).attr("href");
-        }
-    });
+	
+	// iOS WebApp
+	if ( navigator.standalone ){
+		$("a").click(function (event) {
+			if ( $(this).attr("href").indexOf("/") == 0) {
+				event.preventDefault();
+				window.location = $(this).attr("href");
+			}
+		});
+    }
 
 });
