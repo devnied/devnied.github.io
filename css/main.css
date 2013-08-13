@@ -206,7 +206,7 @@ footer a{
 	color:#fff;
 	float: right;
 	margin-top: 181px;
-	font-size: 10px;
+	font-size: 0.8em;
 	margin-right: 5px;
 }
 
@@ -283,6 +283,10 @@ h3 {
 
 .back:hover{
 	opacity:0.7;
+}
+
+.no-border{
+	border:none !important;
 }
 
 /** CONTACT **/
@@ -449,6 +453,12 @@ and (max-width : 1024px){
 		width: auto;
 	}
 	
+	.author{
+		margin-top: 89px;
+		margin-right: 4px;
+		font-size: 0.45em;
+	}
+	
 	.separator {
 		height: 100px;
 	}
@@ -492,6 +502,12 @@ and (max-width : 600px) {
 		height: 70px;
 	}
 	
+	.author{
+		margin-top: 61px;
+		margin-right: 3px;
+		font-size: 0.4em;
+	}
+	
 	.menu li {
 		padding-right: 10px;
 	}
@@ -506,17 +522,27 @@ and (max-width : 600px) {
 	
 	.contact-list{
 		text-align:left;
-		margin-left:30%;
+		margin: 0 auto;
+		display: table;
 	}
 	
 	.contact-list li{
 		display: block;
 		width:auto;
+		margin:0;
 	}
 	
 	.contact-list li a{
 		display: block;
 		overflow: hidden;
+	}
+	
+	.posts li a{
+		display: block;
+		padding: 5px 10px;
+		margin:5px 0;
+		border-radius: 5px;
+		background-color: #EFEFEF;
 	}
 	
 	.timeslot{
