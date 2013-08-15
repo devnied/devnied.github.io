@@ -185,17 +185,8 @@ footer a{
 	background-repeat: no-repeat;
 }
 
-.separator.road{
-	background-position-y: 61%;
-}
-
-
 .separator.projets{
 	background-position: center;
-}
-
-.separator.contact{
-	background-position-y: 94%;
 }
 
 .separator.apropos{

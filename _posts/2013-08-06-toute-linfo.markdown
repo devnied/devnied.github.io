@@ -3,7 +3,7 @@ layout: post
 title:  "Site d'information sur l'actualité - Toute l'info.fr"
 date:   2013-08-06
 categories: projets
-img: /images/toute-linfo/cover.png
+img: /images/toute-linfo/cover.jpg
 copy: mjsonline
 ---
 
