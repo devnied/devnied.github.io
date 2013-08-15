@@ -478,6 +478,11 @@ and (max-width : 1024px){
 		width: auto;
 	}
 	
+	.posts{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
 }
 
 @media only screen 
