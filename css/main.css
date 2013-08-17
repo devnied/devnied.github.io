@@ -265,6 +265,15 @@ h3 {
 	max-width: 100%;
 }
 
+.posts li span{
+	float:right;
+	color:#CDCDCD;
+	font-size: 0.9em;
+	margin-left: 5px;
+	font-weight: 300;
+	font-style: italic;
+}
+
 .back{
 	cursor:pointer;
 	opacity:0.3;
@@ -278,6 +287,30 @@ h3 {
 
 .no-border{
 	border:none !important;
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 70px;
+	position: absolute;
+	left: -7px;
+	top: -20px;
+	color: #7a7a7a;
+}
+
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-style: italic;
+	max-width: 500px;
+	margin:10px auto;
+	padding: 0.25em 42px;
+	line-height: 1.45;
+	position: relative;
+	color: #383838;
+	width:auto;
+    display:table
 }
 
 /** CONTACT **/
@@ -548,6 +581,10 @@ and (max-width : 600px) {
 	.posts{
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+	
+	.posts li span{
+		display: none;
 	}
 	
 }

@@ -3,6 +3,7 @@ layout: post
 title:  "Manipulation de bit en java (Bit-lib4j)"
 date:   2013-08-07 00:13:37
 categories: projets
+tags: Java Bit
 ---
 
 ##Introduction

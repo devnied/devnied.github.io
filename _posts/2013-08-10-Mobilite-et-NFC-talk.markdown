@@ -4,6 +4,7 @@ title:  "Mobilité et NFC dans les transports - Talk"
 date:   2013-08-10 00:13:37
 categories: articles
 img: /images/Mobilite-NFC/cover.jpg
+tags: Android NFC
 ---
 ##Introduction
 

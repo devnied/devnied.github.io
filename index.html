@@ -5,12 +5,5 @@ copy: mischiru
 subtitle: Articles
 ---
 
-  <ul class="posts">
-    {% for post in site.posts %}
-    	{% if post.categories contains 'articles' %}
-      <li>
-      	<a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+{% assign categ = 'articles' %}
+{% include posts_list.html %}

@@ -5,6 +5,7 @@ date:   2013-08-06
 categories: projets
 img: /images/toute-linfo/cover.jpg
 copy: mjsonline
+tags: JSF RSS
 ---
 
 ##Introduction

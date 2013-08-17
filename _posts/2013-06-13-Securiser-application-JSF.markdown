@@ -5,6 +5,7 @@ date:   2013-07-13 00:13:37
 categories: articles
 img: /images/securisation-JSF/cover.jpg
 copy: echiner1
+tags: JSF Realm
 ---
 
 ##Introduction

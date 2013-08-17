@@ -4,6 +4,7 @@ title:  "Transformation de bitmap avec Android"
 date:   2013-08-10 00:13:37
 categories: projets
 img: /images/Android/cover.jpg
+tags: Android Bitmap
 ---
 ##Introduction
 

@@ -4,6 +4,7 @@ title:  "Internationalisation d’une application JSF"
 date:   2013-07-16 00:13:37
 categories: articles
 img: /images/Internationalisation-JSF/cover.jpg
+tags: JSF i18n
 ---
 
 ##Introduction

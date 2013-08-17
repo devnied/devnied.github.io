@@ -6,10 +6,5 @@ sepStyle: projets
 title: Projets
 ---
 
-<ul class="posts">
-	{% for post in site.posts %}
-		{% if post.categories contains 'projets' %}
-	  		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	  	{% endif %}
-	{% endfor %}
-</ul>
+{% assign categ = 'projets' %}
+{% include posts_list.html %}
