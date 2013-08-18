@@ -500,6 +500,7 @@ and (max-width : 1024px){
 	.gravatar{
 		height:100px;
 		width: 100px;
+		margin-left: 20px;
 	}
 	
 	h1 {
@@ -515,7 +516,7 @@ and (max-width : 1024px){
 		width: auto;
 	}
 	
-	.posts{
+	.posts, .intro, .resume{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -543,6 +544,10 @@ and (max-width : 600px) {
 	
 	.menu li {
 		padding-right: 10px;
+	}
+	
+	.gravatar{
+		margin-left: 0px;
 	}
 	
 	.menu{
@@ -589,6 +594,11 @@ and (max-width : 600px) {
 	
 	.posts li span{
 		display: none;
+	}
+	
+	.intro, .resume{
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 	
 }
