@@ -2,9 +2,8 @@
 layout: default
 back: true
 ---
-<div class="post">
+<article>
 	{{ content }}
-	
 	{% if page.comment %}
 	<div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -16,7 +15,6 @@ back: true
         })();
     </script>
     {% endif %}
-	
-</div>
+</article>
 
 

@@ -33,5 +33,37 @@ $(function(){
 			}
 		});
     }
+    
+    
+    // Tag page
+    if (window.location.pathname.match("^/tag/") ){
+		$("h1 span").html("TAG " + window.location.hash);
+		
+		 function tagDisplay(context,e){
+		 	var tag = e;
+		 	if (tag == null){
+		 		tag = window.location.hash;
+		 	}
+		 	
+			if ( $(context).attr("rel").indexOf(tag+",") == -1 ){
+				$(context).hide();
+			}else{
+				$(context).show();
+			}
+		}
+		
+		$(".posts li").each(function(){
+				tagDisplay(this,null);
+		});
+		
+		$(".posts li a").click(function(){
+			var tag = this.hash;
+			$("h1 span").html("TAG " + tag);
+			$(".posts li").each(function(){
+				tagDisplay(this,tag);
+			});
+		});
+		
+    }
 
 });

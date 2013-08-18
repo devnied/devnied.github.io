@@ -240,23 +240,23 @@ h3 {
 	line-height: 190%;
 }
 
-.post a{
+article a{
 	text-decoration: none;
 	color: #888;
 	font-style: oblique;
 }
 
-.post a:hover{
+article a:hover{
 	text-decoration: underline;
 }
 
-.post li{
+article li{
 	list-style-type: square;
 	font-size: 1.1em;
 	margin-left: 40px;
 }
 
-.post img{
+article img{
 	display: block;
 	text-align: center;
 	margin: 8px auto;
@@ -265,13 +265,17 @@ h3 {
 	max-width: 100%;
 }
 
-.posts li span{
-	float:right;
-	color:#CDCDCD;
+.posts li span a,.posts li span a:visited{
+	float: right;
+	color: #CDCDCD;
 	font-size: 0.9em;
 	margin-left: 5px;
 	font-weight: 300;
 	font-style: italic;
+}
+
+.posts li span a:hover{
+	color: #AAA;
 }
 
 .back{
