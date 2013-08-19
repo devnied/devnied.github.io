@@ -56,7 +56,7 @@ $(function(){
 				tagDisplay(this,null);
 		});
 		
-		$(".posts a,.tags a").click(function(){
+		$("a.tag").click(function(){
 			var tag = this.hash;
 			$("h1 span").html("TAG " + tag);
 			$(".posts li").each(function(){
