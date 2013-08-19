@@ -14,7 +14,7 @@ More and more mobile applications are based on time to work.
 Many games works with waiting time longer or shorter depending on user actions, payments, transport, client management applications have a business model based on accurate timing information.
 > Remember that time is money
 
-In game to reduce the waiting time between stages it's possible to pay.<br/>
+In game to reduce waiting time between stages it's possible to pay.<br/>
 How validate something, like discount ticket with wrong date and time ?<br/>
 How manage client loyalty with wrong subscription date ?<br/>
 
