@@ -5,6 +5,7 @@ date:   2013-08-10 00:13:37
 categories: projets
 img: /images/Android/cover.jpg
 tags: Android Bitmap
+desc: AndroidBitmapTransform est une librairie permettant de faciliter la manipulation des bitmaps avec Android
 ---
 ##Introduction
 

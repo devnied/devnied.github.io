@@ -15,7 +15,11 @@
 <link rel="apple-touch-icon" sizes="144x144" href="/css/img/apple-touch-icon-ipad3.png">
 <meta name="viewport" content="initial-scale=1.0">
 <meta name="author" content="Julien MILLAU">
-<meta name="description" content="Développeur JEE et Mobile. Passionné de nouvelles technologies #Android #iOS #NFC #JEE #JSF #jQuery #ServiceMix">       
+{% if page.desc %}
+	<meta name="description" content="{{ page.desc }}">       
+{% else %}
+    <meta name="description" content="Développeur JEE et Mobile. Passionné de nouvelles technologies #Android #iOS #NFC #JEE #JSF #jQuery #ServiceMix">       
+{% endif %}
 <!-- CSS -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,900,400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/css/main.css">

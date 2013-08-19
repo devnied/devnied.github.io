@@ -7,6 +7,7 @@ img: /images/secure-time-app/cover.jpg
 copy: thinkpanama
 comment: true
 tags: Android Time
+desc: Many games works with waiting time longer or shorter depending on user actions, payments, transport, client management applications have a business model based on accurate timing information.
 ---
 ##Introduction
 More and more mobile applications are based on time to work. 

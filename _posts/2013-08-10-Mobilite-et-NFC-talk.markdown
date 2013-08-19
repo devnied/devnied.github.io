@@ -5,6 +5,7 @@ date:   2013-08-10 00:13:37
 categories: articles
 img: /images/Mobilite-NFC/cover.jpg
 tags: Android NFC
+desc: Mes slides lors de mon talk sur la mobilité et le NFC dans les transports lors de l'API Hour #3 de l'association Clermont'ech.
 ---
 ##Introduction
 

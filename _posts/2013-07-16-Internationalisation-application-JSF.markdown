@@ -5,6 +5,7 @@ date:   2013-07-16 00:13:37
 categories: articles
 img: /images/Internationalisation-JSF/cover.jpg
 tags: JSF i18n
+desc: Chaque utilisateur qui se connecte sur un site web possède des spécificités qui lui sont propres notamment sa langue. Lors de la connexion d’un visiteur, il est possible de connaître la langue de celui-ci grâce à la variable LANG dans les entêtes de la requête.
 ---
 
 ##Introduction

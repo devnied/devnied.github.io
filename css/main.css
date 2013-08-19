@@ -274,7 +274,24 @@ article img{
 	font-style: italic;
 }
 
-.posts li span a:hover{
+.tags{
+	margin-top:25px;
+}
+
+.tags li{
+	display:inline;
+}
+
+.tags li,.tags li a,.tags li a:visited{
+	color: #CDCDCD;
+	margin-left: 3px;
+	font-weight: 300;
+	font-style: italic;
+	text-decoration:none;
+	font-size: 0.9em;
+}
+
+.posts li span a:hover,.tags li a:hover{
 	color: #AAA;
 }
 
@@ -516,7 +533,7 @@ and (max-width : 1024px){
 		width: auto;
 	}
 	
-	.posts, .intro, .resume{
+	.posts, .intro, .resume, .tags{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -587,7 +604,7 @@ and (max-width : 600px) {
 		width:auto;
 	}
 	
-	.posts{
+	.posts, .tags{
 		margin-left: 10px;
 		margin-right: 10px;
 	}

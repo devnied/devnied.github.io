@@ -6,6 +6,7 @@ categories: articles
 img: /images/securisation-JSF/cover.jpg
 copy: echiner1
 tags: JSF Realm
+desc: Pour sécuriser une application JSF sans utiliser d’autres frameworks tel que Spring ou Struts qui intègrent un module de sécurité (Spring Sécurity pour Spring), on peut utiliser Realm.
 ---
 
 ##Introduction

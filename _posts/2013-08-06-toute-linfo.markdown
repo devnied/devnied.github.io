@@ -6,6 +6,7 @@ categories: projets
 img: /images/toute-linfo/cover.jpg
 copy: mjsonline
 tags: JSF RSS
+desc: Toute l’info.fr est un agrégateur de flux rss capable de parser des fils de syndication structurés mais aussi des fils ne suivant aucunes structures ou comportant des erreurs.
 ---
 
 ##Introduction
