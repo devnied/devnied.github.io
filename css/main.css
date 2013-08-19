@@ -33,7 +33,7 @@ video {
 
 .highlight code{
 	display: block;
-	overflow: scroll;
+	overflow-x: scroll;
 }
 
 html, body { 
@@ -332,6 +332,10 @@ blockquote {
 	color: #383838;
 	width:auto;
     display:table
+}
+
+#disqus_thread{
+	margin-top: 60px;
 }
 
 /** CONTACT **/
