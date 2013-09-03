@@ -14,7 +14,7 @@ Avec une introduction sur le NFC, sur les différents types de TAG et leurs util
 
 ##Vidéo et Slides
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/Qv3At7qOIes?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" src="//www.youtube.com/embed/Qv3At7qOIes?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ##Liens 
 Lien vers les slides: [Slides du Talk]<br/>
