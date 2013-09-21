@@ -115,7 +115,7 @@ header a.active{
 }
 
 nav{
-	width: 650px;
+	width: 700px;
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -159,7 +159,7 @@ footer{
 	padding: 40px 0;
 	border-top: 1px solid #eee;
 	text-align: center;
-	width: 650px;
+	width: 700px;
 	margin: 40px auto 40px auto;
 	text-align:center;
 	font-size:13px;	
@@ -202,7 +202,7 @@ footer a{
 }
 
 .container {
-	width: 650px;
+	width: 700px;
 	margin: 0 auto;
 }
 
