@@ -33,7 +33,7 @@ bit.getData();      // return 0x61  (0110 0001b)
 <dependency>
   <groupId>com.github.devnied</groupId>
   <artifactId>bit-lib4j</artifactId>
-  <version>1.4.4</version>
+  <version>1.4.5</version>
 </dependency>
 {% endhighlight %}
 
