@@ -21,7 +21,7 @@ int res = bit.getNextInteger(4); // read the first 4 bits to an integer
 ###Ecriture des données
 {% highlight java %}
 BitUtils bit = new BitUtils(8);
-bit.setNextInteger(3,3); // set and integer on 3 bits
+bit.setNextInteger(3,3); // set an integer on 3 bits
 bit.setNextInteger(1,5); // set one value on 5 bits
  
 // Result
