@@ -2,6 +2,10 @@ $(function(){
 	// define reverse jquery function
 	jQuery.fn.reverse = [].reverse;
 	
+	function htmlEncode(value){
+	  return $('<div/>').text(value).html();
+	}
+	
 	var selected;
 
 	$(".menu a").reverse().each(function(){
@@ -37,15 +41,16 @@ $(function(){
     
     // Tag page
     if (window.location.pathname.match("^/tag/") ){
-		$("h1 span").html("TAG " + window.location.hash);
+		$("h1 span").html("TAG " + htmlEncode(window.location.hash));
 		
 		 function tagDisplay(context,e){
 		 	var tag = e;
 		 	if (tag == null){
 		 		tag = window.location.hash;
 		 	}
+		 	tag = tag.toLowerCase();
 		 	
-			if ( $(context).attr("rel").indexOf(tag+",") == -1 ){
+			if ( $(context).attr("rel").toLowerCase().indexOf(tag+",") == -1 ){
 				$(context).hide();
 			}else{
 				$(context).show();
