@@ -4,6 +4,11 @@ back: true
 ---
 <article>
 	{{ content }}
+	<p class="article-tag">
+		{% for tag in page.tags reversed %}
+				<span><a class="tag" href="/tag/#{{ tag }}">#{{ tag }}</a></span>
+		{% endfor %}
+	</p>
 	{% if page.comment %}
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
