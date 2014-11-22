@@ -438,10 +438,18 @@ p {
 .timeslot .sub-title a{
 	font-size : 1em;
 	color:#AAA;
-	text-decoration: none;
 }
 
-.timeslot .sub-title a:hover{
+.timeslot p.content a[href^="http"]:after, article a[href^="http"]:after {
+     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAwUExURWdmZGhmZ2VnZmdlZmVlZTMzAGZoZ5mZmWNnZmdnZWZkZWdnZ9Ly52ZmZv////8AALUj7CAAAAAQdFJOU////////////////////wDgI10ZAAAAQElEQVR42mSKQRKAIAwDIyoIbez/f0uDM1zcXHZ2gtjgp+S9a2OAdVgP5nC8yVjfR+b6gaqfXi6K1Jg7mToFGAAkpgUSmADRiQAAAABJRU5ErkJggg==);    
+}
+
+.timeslot a, .timeslot:active {
+	text-decoration: none;
+	color:inherit;
+}
+
+.timeslot a:hover{
 	text-decoration: underline;
 }
 

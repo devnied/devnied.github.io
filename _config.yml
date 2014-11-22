@@ -1,5 +1,5 @@
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 permalink: none
 title: Julien MILLAU
 safe: true
