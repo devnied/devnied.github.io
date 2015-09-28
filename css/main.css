@@ -36,7 +36,7 @@ video {
 	overflow-x: scroll;
 }
 
-html, body { 
+html, body {
 	height: 100%;
 }
 
@@ -81,7 +81,7 @@ a.symbol:before {
     content: attr(title);
     margin-right: 0.3em;
     font-size: 130%;
-}		
+}
 
 /*****************************************************************************/
 /*
@@ -95,7 +95,7 @@ header{
 
 .name a{
 	font-size: 30px;
-	font-weight: 100; 
+	font-weight: 100;
 }
 
 header a, header b{
@@ -166,7 +166,7 @@ footer{
 	width: 700px;
 	margin: 40px auto 40px auto;
 	text-align:center;
-	font-size:13px;	
+	font-size:13px;
 }
 
 footer a{
@@ -189,12 +189,16 @@ footer a{
 	background-repeat: no-repeat;
 }
 
-.separator.projets{
-	background-position: center;
-}
-
 .separator.apropos{
 	background-position-y: 49%;
+}
+
+.separator.contact{
+	background-position-y: 23%;
+}
+
+.separator.home{
+	background-position-y: 30%;
 }
 
 .author{
@@ -376,7 +380,7 @@ blockquote {
 	display: inline-table;
 	width: 26%;
 	margin-right:10px;
-	
+
 }
 
 /** A propos **/
@@ -392,8 +396,8 @@ blockquote {
 }
 
 p {
-	font-size: 1.1em; 
-	margin: 5px 0; 
+	font-size: 1.1em;
+	margin: 5px 0;
 	padding: 5px 0;
 }
 
@@ -441,7 +445,7 @@ p {
 }
 
 .timeslot p.content a[href^="http"]:after, article a[href^="http"]:after {
-     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAwUExURWdmZGhmZ2VnZmdlZmVlZTMzAGZoZ5mZmWNnZmdnZWZkZWdnZ9Ly52ZmZv////8AALUj7CAAAAAQdFJOU////////////////////wDgI10ZAAAAQElEQVR42mSKQRKAIAwDIyoIbez/f0uDM1zcXHZ2gtjgp+S9a2OAdVgP5nC8yVjfR+b6gaqfXi6K1Jg7mToFGAAkpgUSmADRiQAAAABJRU5ErkJggg==);    
+     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAwUExURWdmZGhmZ2VnZmdlZmVlZTMzAGZoZ5mZmWNnZmdnZWZkZWdnZ9Ly52ZmZv////8AALUj7CAAAAAQdFJOU////////////////////wDgI10ZAAAAQElEQVR42mSKQRKAIAwDIyoIbez/f0uDM1zcXHZ2gtjgp+S9a2OAdVgP5nC8yVjfR+b6gaqfXi6K1Jg7mToFGAAkpgUSmADRiQAAAABJRU5ErkJggg==);
 }
 
 .timeslot a, .timeslot:active {
@@ -484,7 +488,7 @@ p {
 }
 
 .even {
-	float: right;	
+	float: right;
 	padding: 10px 0 0 100px;
 	border-color: #ca0000;
 	clear:right;
@@ -517,7 +521,7 @@ code{
 /*
 /*****************************************************************************/
 
-@media only screen 
+@media only screen
 and (max-width : 1024px){
 
 	header{
@@ -527,101 +531,101 @@ and (max-width : 1024px){
 	nav{
 		width: auto;
 	}
-	
+
 	.author{
 		margin-top: 89px;
 		margin-right: 4px;
 		font-size: 0.45em;
 	}
-	
+
 	.separator {
 		height: 100px;
 	}
-	
+
 	.container {
 		width: auto;
 		margin-left:10px;
 		margin-right:10px;
 	}
-	
+
 	.gravatar{
 		height:100px;
 		width: 100px;
 		margin-left: 20px;
 	}
-	
+
 	h1 {
 		margin: 19px 0 20px 6px;
 		padding: 5px 0 5px 13px;
 	}
-	
+
 	.back{
 		opacity:0.7;
 	}
-	
+
 	footer{
 		width: auto;
 	}
-	
+
 	.posts, .intro, .resume, .tags{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
-	
+
 }
 
-@media only screen 
+@media only screen
 and (max-width : 600px) {
-	
+
 	.social {
 		position:absolute;
 		top :58px;
 		right : 10px;
 	}
-	
+
 	.separator {
 		height: 70px;
 	}
-	
+
 	.author{
 		margin-top: 61px;
 		margin-right: 3px;
 		font-size: 0.4em;
 	}
-	
+
 	.menu li {
 		padding-right: 10px;
 	}
-	
+
 	.gravatar{
 		margin-left: 0px;
 	}
-	
+
 	.menu{
 		text-align:center;
 	}
-	
+
 	.social li:last-child {
 		display: none;
 	}
-	
+
 	.contact-list{
 		text-align:left;
 		margin: 0 auto;
 		display: table;
 	}
-	
+
 	.contact-list li{
 		display: block;
 		width:auto;
 		margin:0;
 	}
-	
+
 	.contact-list li a{
 		display: block;
 		overflow: hidden;
 	}
-	
+
 	.posts li a{
 		display: block;
 		padding: 5px 10px;
@@ -629,27 +633,23 @@ and (max-width : 600px) {
 		border-radius: 5px;
 		background-color: #EFEFEF;
 	}
-	
+
 	.timeslot{
 		width:auto;
 	}
-	
+
 	.posts, .tags{
 		margin-left: 10px;
 		margin-right: 10px;
 	}
-	
+
 	.posts li span{
 		display: none;
 	}
-	
+
 	.intro, .resume{
 		margin-left: 0px;
 		margin-right: 0px;
 	}
-	
+
 }
-
-
-
-

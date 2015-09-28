@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Transformation de bitmap avec Android"
+title:  "Bitmap transformation on Android"
 date:   2013-08-10 00:13:37
-categories: projets
+categories: articles
 img: /images/Android/cover.jpg
 tags: Android Bitmap
-desc: AndroidBitmapTransform est une librairie permettant de faciliter la manipulation des bitmaps avec Android
+desc: AndroidBitmapTransform is an useful library to do Bitmap transformation on Android?
 ---
-##Introduction
+##Summary
 
-[AndroidBitmapTransform] est une librairie permettant de faciliter la manipulation des bitmaps avec Android<br/>
-Version Actuelle : 1.0.0
+[AndroidBitmapTransform] is an useful library to do Bitmap transformation on Android.<br/>
+Current version : 1.0.0
 
-##Utilisation
+##How use it
 
-Cette librairie est trés simple à utiliser, il suffit d'appeler la méthode BitmapTransform.createBitmap() avec les paramètres souhaités.
+It is very easy to get started with AndroidBitmapTransform:
 
 ### Prototype
 {% highlight java %}
@@ -33,7 +33,7 @@ public static Bitmap createBitmap(final Bitmap pDst, final Bitmap pSrc,
 {% endhighlight %}
 
 
-###Exemple de multiplication entre deux bitmaps
+###Multiplication of two bitmaps
 {% highlight java %}
 ImageView view = (ImageView) findViewById(R.id.bitmapResult);
 Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
@@ -41,7 +41,7 @@ Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
 view.setImageBitmap(bitmap);
 {% endhighlight %}
 <br/>
-###Exemple d'ajout de deux bitmaps
+###Addition of two bitmaps
 {% highlight java %}
 ImageView view = (ImageView) findViewById(R.id.bitmapResult);
 Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
@@ -49,7 +49,7 @@ Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
 view.setImageBitmap(bitmap);
 {% endhighlight %}
 <br/>
-###Liste des modes de fusion
+###Fusion mode
 
 <img src="/images/AndroidBitmapTransform/Xfermodes.png" />
 ##Maven
@@ -61,8 +61,8 @@ view.setImageBitmap(bitmap);
 </dependency>
 {% endhighlight %}
 
-##Liens Utiles
+##Useful links
 
-Lien du projet sur GitHub: [AndroidBitmapTransform]
+Project link on GitHub: [AndroidBitmapTransform]
 
-[AndroidBitmapTransform]: https://github.com/devnied/AndroidBitmapTransform "Source du projet sur GitHub"
+[AndroidBitmapTransform]: https://github.com/devnied/AndroidBitmapTransform "Project source on GitHub"

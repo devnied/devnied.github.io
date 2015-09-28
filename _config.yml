@@ -1,5 +1,6 @@
 markdown: redcarpet
 highlighter: pygments
+excerpt_separator: ""
 permalink: none
 title: Julien MILLAU
 safe: true

@@ -2,7 +2,7 @@
 layout: post
 title:  "Manipulation de bit en java (Bit-lib4j)"
 date:   2013-08-07 00:13:37
-categories: projets
+categories: articles
 tags: Java Bit
 desc: Librairie permettant de facilité la lecture d’octet (byte) en java, j’ai créé une librairie JAVA permettant de lire et d’écrire depuis/dans un tableau d’octet les différents types JAVA en spécifiant la taille souhaitée.
 ---
@@ -23,7 +23,7 @@ int res = bit.getNextInteger(4); // read the first 4 bits to an integer
 BitUtils bit = new BitUtils(8);
 bit.setNextInteger(3,3); // set an integer on 3 bits
 bit.setNextInteger(1,5); // set one value on 5 bits
- 
+
 // Result
 bit.getData();      // return 0x61  (0110 0001b)
 {% endhighlight %}
