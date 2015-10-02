@@ -421,18 +421,18 @@ p {
 
 
 .timeslot {
-	width: 410px;
+	width: 432px;
 	float: left;
 	margin: 0 0 10px;
 	padding: 10px 110px 0 0;
-	border-top: 3px solid #ddd;
+	border-top: 2px solid #ddd;
 	position: relative;
 	clear:left;
 }
 
 .timeslot .logo{
   margin-top:20px;
-  width:110px;
+  width:86px;
 }
 
 .timeslot .title{
@@ -488,6 +488,7 @@ p {
 
 .timeslot p.content{
 	margin-bottom: 0;
+  min-height: 71px;
 }
 
 .timeslot p.skill{
@@ -499,7 +500,7 @@ p {
 
 .even {
 	float: right;
-	padding: 10px 0 0 100px;
+	padding: 10px 0 0 110px;
 	border-color: #ca0000;
 	clear:right;
 }
@@ -645,11 +646,31 @@ and (max-width : 600px) {
 	}
 
 	.timeslot{
-		width:auto;
+		width:100%;
+    padding: 10px 0 0 0;
 	}
 
+  .timeslot .title{
+    margin-right: 92px;
+  }
+
+  .timeslot span{
+    font-size: 2em;
+    width: 110px;
+    text-align: right;
+  }
+
+  .timeslot span.year-month{
+      margin-top: 16px;
+  }
+
+  .even span{
+    left:auto;
+  }
+
   .timeslot .logo{
-    margin-top:35px;
+    display:none;
+    /*margin-top:35px;*/
   }
 
 	.posts, .tags{

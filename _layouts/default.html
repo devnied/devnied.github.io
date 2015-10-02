@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         {% include header.html %}
     </head>
@@ -17,7 +17,7 @@
 		  			{% if page.back %}
 		  				<img src="/css/img/back.png" class="back"/>
 		  			{% endif %}
-		  			<span>{{ page.title }} {{ page.subtitle }}</span>
+		  			{{ page.title }} {{ page.subtitle }}
 		  		</h1>
 				{{ content }}
   		</section>
