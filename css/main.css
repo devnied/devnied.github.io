@@ -316,6 +316,7 @@ article .article-tag{
 	opacity:0.3;
 	width: 19px;
 	vertical-align: middle;
+  margin-right: 5px;
 }
 
 .back:hover{
