@@ -90,7 +90,7 @@ a.symbol:before {
 /*****************************************************************************/
 
 header{
-	margin: 100px 0 35px 0;
+	margin: 90px 0 35px 0;
 }
 
 .name a{
@@ -185,7 +185,7 @@ footer a{
 	background-size: 100% ;
 	background-position-y:bottom;
 	height: 200px;
-	box-shadow: inset 0 0 15px rgba(0,0,0,.6);
+	box-shadow: inset 0 0 6px rgba(0,0,0,.4);
 	background-repeat: no-repeat;
 }
 
@@ -199,6 +199,10 @@ footer a{
 
 .separator.home{
 	background-position-y: 20%;
+}
+
+.separator.tag{
+  background-position-y: 47%;
 }
 
 .author{
@@ -416,13 +420,18 @@ p {
 
 
 .timeslot {
-	width: 400px;
+	width: 410px;
 	float: left;
 	margin: 0 0 10px;
-	padding: 10px 100px 0 0;
+	padding: 10px 110px 0 0;
 	border-top: 3px solid #ddd;
 	position: relative;
 	clear:left;
+}
+
+.timeslot .logo{
+  margin-top:20px;
+  width:110px;
 }
 
 .timeslot .title{
@@ -637,6 +646,10 @@ and (max-width : 600px) {
 	.timeslot{
 		width:auto;
 	}
+
+  .timeslot .logo{
+    margin-top:35px;
+  }
 
 	.posts, .tags{
 		margin-left: 10px;

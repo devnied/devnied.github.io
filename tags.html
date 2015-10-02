@@ -1,10 +1,10 @@
 ---
 layout: default
-img: /css/img/tag.png
+img: /css/img/tag.jpg
 permalink: /tag/
 subtitle: Tag
+sepStyle: tag
 back: true
-copy: luc legay
 ---
 <ul class="posts">
 	{% for post in site.posts %}
@@ -19,11 +19,11 @@ copy: luc legay
 <div class="tags">
 	<h3>Tag cloud</h3>
 	<ul>
-	   {% for tag in site.tags %}      
+	   {% for tag in site.tags %}
 	   <li>
-			<a class="tag" href="/tag/#{{ tag | first | cgi_encode }}" 
+			<a class="tag" href="/tag/#{{ tag | first | cgi_encode }}"
 			style="font-size:{{tag | last | size | times:100 | divided_by:3 | plus:100}}%">#{{ tag | first }}</a>{% unless forloop.last %}, {% endunless %}
 		</li>
-		{% endfor %}    
+		{% endfor %}
 	</ul>
 </div>
