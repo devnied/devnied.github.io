@@ -187,26 +187,26 @@ footer a{
 .separator {
 	background-color: #2B2B2B;
 	background-size: 100% ;
-	background-position-y:bottom;
+  background-position: 0 bottom;
 	height: 200px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.4);
 	background-repeat: no-repeat;
 }
 
 .separator.apropos{
-	background-position-y: 49%;
+	background-position: 0% 49%;
 }
 
 .separator.contact{
-	background-position-y: 23%;
+	background-position: 0% 23%;
 }
 
 .separator.home{
-	background-position-y: 20%;
+	background-position: 0% 20%;
 }
 
 .separator.tag{
-  background-position-y: 47%;
+  background-position: 0% 47%;
 }
 
 .author{
