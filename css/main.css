@@ -245,6 +245,10 @@ h3 {
 	text-decoration:underline;
 }
 
+b {
+  font-weight: bold;
+}
+
 .posts li a, .posts li a:visited{
 	color: #307EA9;
 	text-decoration:none;
