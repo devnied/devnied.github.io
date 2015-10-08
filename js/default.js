@@ -41,7 +41,7 @@ $(function(){
 
     // Tag page
     if (window.location.pathname.match("^/tag/") ){
-			$("h1 span").html("TAG " + htmlEncode(window.location.hash));
+			$("h1").html("TAG " + htmlEncode(window.location.hash));
 
 			 function tagDisplay(context,e){
 			 	var tag = e;
@@ -63,7 +63,7 @@ $(function(){
 
 			$("a.tag").click(function(){
 				var tag = this.hash;
-				$("h1 span").html("TAG " + tag);
+				$("h1").html("TAG " + htmlEncode(tag));
 				$(".posts li").each(function(){
 					tagDisplay(this,tag);
 				});
