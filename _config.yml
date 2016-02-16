@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 excerpt_separator: ""
 permalink: none
