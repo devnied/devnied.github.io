@@ -17,7 +17,6 @@ Avec une introduction sur le NFC, sur les différents types de TAG et leurs util
 <iframe class="video" src="https://www.youtube.com/embed/Qv3At7qOIes" frameborder="0" allowfullscreen></iframe>
 
 ##Liens
-Lien vers les slides: [Slides du Talk]<br/>
-Site de l'association Clermont'ech:  [clermontech.org]
-[Slides du Talk]: http://julien-millau.fr/NFC-slides-Clermontech/
-[clermontech.org]: http://clermontech.org/ "Site de l'association Clermont'ech"
+
+Lien vers les slides: [Slides du Talk](http://julien-millau.fr/NFC-slides-Clermontech/)<br/>
+Site de l'association Clermont'ech: [clermontech.org](http://clermontech.org/ "Site de l'association Clermont'ech")

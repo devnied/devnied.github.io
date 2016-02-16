@@ -7,18 +7,24 @@ tags: Java Bit
 desc: Librairie permettant de facilité la lecture d’octet (byte) en java, j’ai créé une librairie JAVA permettant de lire et d’écrire depuis/dans un tableau d’octet les différents types JAVA en spécifiant la taille souhaitée.
 ---
 
-##Introduction
+## Introduction
+
 La manipulation de bits en java n’est pas aussi aisée qu’en C/C++ ou que dans d’autre language car tous les types JAVA sont signés.<br/><br/>
 Afin de facilité la lecture d’octet (byte) en java, j’ai créé une librairie JAVA permettant de lire et d’écrire depuis/dans un tableau d’octet les différents types JAVA en spécifiant la taille souhaitée.<br/><br/>
 Cette librairie est open-source et disponible sur [GitHub].
-##Utilisation
-###Lecture des données
+
+## Utilisation
+
+### Lecture des données
+
 {% highlight java %}
 byte[] array = new byte[]{0x12,0x25}
 BitUtils bit = new BitUtils(array);
 int res = bit.getNextInteger(4); // read the first 4 bits to an integer
 {% endhighlight %}
-###Ecriture des données
+
+### Ecriture des données
+
 {% highlight java %}
 BitUtils bit = new BitUtils(8);
 bit.setNextInteger(3,3); // set an integer on 3 bits
@@ -28,7 +34,8 @@ bit.setNextInteger(1,5); // set one value on 5 bits
 bit.getData();      // return 0x61  (0110 0001b)
 {% endhighlight %}
 
-##Maven
+## Maven
+
 {% highlight xml %}
 <dependency>
   <groupId>com.github.devnied</groupId>
@@ -37,7 +44,8 @@ bit.getData();      // return 0x61  (0110 0001b)
 </dependency>
 {% endhighlight %}
 
-##Liens Utiles
+## Liens Utiles
+
 Adresse du projet: [https://github.com/devnied/Bit-lib4j]<br/>
 Wiki : [https://github.com/devnied/Bit-lib4j/wiki]
 

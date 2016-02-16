@@ -9,11 +9,11 @@ tags: JSF Realm
 desc: Pour sécuriser une application JSF sans utiliser d’autres frameworks tel que Spring ou Struts qui intègrent un module de sécurité (Spring Sécurity pour Spring), on peut utiliser Realm.
 ---
 
-##Introduction
+## Introduction
 Pour sécuriser une application JSF sans utiliser d’autres frameworks tel que Spring ou Struts qui intègrent un module de sécurité (Spring Sécurity pour Spring), on peut utiliser Realm.<br/><br/>
 Realm est un mécanisme servant à identifier les utilisateurs. Il permet de vérifier le login et le mot de passe d’un utilisateur afin de savoir si l’utilisateur connecté possède les droits suffisants pour consulter la ressource demandée.<br/><br/>
 Pour chaque utilisateur, Realm connait la liste des rôles(Autorisations) associés à un utilisateur. La protection des ressources se fait par rôle, on indique le rôle dont doit disposer un utilisateur pour accéder à la ressource.
-##Modes de fonctionnement de Realm
+## Modes de fonctionnement de Realm
 
 + <b>Realm</b> possède plusieurs modes de fonctionnement pour le stockage des Utilisateurs et des roles. Il est possible d’utiliser:
 + <b>JDBCRealm</b> : Afin d’utiliser une base de données pour stocker les informations.
@@ -27,8 +27,9 @@ Coté client, les modes de connexion sont ceux définis par le protocole HTTP.
 + <b>Digest</b>: Cette méthode transmet simplement le Hash du mot de passe.
 + <b>Certificat</b> : Permet d’authentifier un utilisateur avec un certificat.
 
-##Implémentation de Realm avec JSF dans GlassFish
-###Realm sur GlassFish
+## Implémentation de Realm avec JSF dans GlassFish
+
+### Realm sur GlassFish
 
 Afin d’utiliser realm avec GlassFish, il est nécessaire d’ajouter dans GlassFish les Utilisateurs (Utilisation de FileRealm).
 
@@ -44,7 +45,8 @@ exemple:
 {% highlight xml %}
 ADMIN:USER:CONFIG ....
 {% endhighlight %}
-###Dans l’application web
+
+### Dans l’application web
 
 Il faut ajouter au fichier web.xml la liste des adresses à sécuriser ainsi que les rôles nécessaires pour y accéder.
 {% highlight xml %}

@@ -8,7 +8,8 @@ tags: JSF i18n
 desc: Chaque utilisateur qui se connecte sur un site web possède des spécificités qui lui sont propres notamment sa langue. Lors de la connexion d’un visiteur, il est possible de connaître la langue de celui-ci grâce à la variable LANG dans les entêtes de la requête.
 ---
 
-##Introduction
+## Introduction
+
 Chaque utilisateur qui se connecte sur un site web possède des spécificités qui lui sont propres notamment sa langue. Lors de la connexion d’un visiteur, il est possible de connaître la langue de celui-ci grâce à la variable LANG dans les entêtes de la requête.<br/>
 <br/>
 La langue du visiteur se retrouve codée :<br/>
@@ -19,7 +20,9 @@ La langue du visiteur se retrouve codée :<br/>
 + en_UK pour la Grande Bretagne
 
 En JEE, il existe des mécanismes permettant à une application de s’adapter à la langue du visiteur appelés i18n (il y a 18 lettres entre le i et le n de internationalisation)
+
 ##Implémentation de i18n en JSF
+
 Tout d’abord, il est nécessaire de créer les fichiers .properties contenant les messages dans les différentes langues.<br/>
 <img src="/images/Internationalisation-JSF/struct.png" />
 On nomme en général les fichiers sous la forme « messages`_<LANG>`.properties ».<br/>
@@ -97,10 +100,10 @@ public class LocaleManagedBean implements Serializable{
         Application application = FacesContext.getCurrentInstance()
            									  .getApplication();
         Iterator<Locale> supportedLocales = application.getSupportedLocales();
-        
+
         while (supportedLocales.hasNext()) {
                 Locale loc = supportedLocales.next();
-                items.add(new SelectItem(loc.getLanguage(), 
+                items.add(new SelectItem(loc.getLanguage(),
                 						 loc.getDisplayName(locale) );
         }
         SelectItem[] locales = new SelectItem[items.size()];
@@ -137,4 +140,3 @@ Puis dans le fichier xhtml, on ajoute les messages à afficher ainsi que la lang
 {% endhighlight %}
 Mettre le nom de la langue en attribut de la balise </html> est utile pour la SEO.<br/>
 la valeur de outputLabel s’adaptera au choix de la langue du visteur.
-

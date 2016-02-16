@@ -1,5 +1,5 @@
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 excerpt_separator: ""
 permalink: none
 title: Julien MILLAU

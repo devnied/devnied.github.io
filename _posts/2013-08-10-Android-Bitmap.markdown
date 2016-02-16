@@ -7,16 +7,17 @@ img: /images/Android/cover.jpg
 tags: Android Bitmap
 desc: AndroidBitmapTransform is an useful library to do Bitmap transformation on Android?
 ---
-##Summary
+## Summary
 
 [AndroidBitmapTransform] is an useful library to do Bitmap transformation on Android.<br/>
 Current version : 1.0.0
 
-##How use it
+## How use it
 
 It is very easy to get started with AndroidBitmapTransform:
 
 ### Prototype
+
 {% highlight java %}
 /**
  * Method to create a Bitmap with the specified mode
@@ -32,27 +33,30 @@ public static Bitmap createBitmap(final Bitmap pDst, final Bitmap pSrc,
 		final boolean pNewInstance)
 {% endhighlight %}
 
+### Multiplication of two bitmaps
 
-###Multiplication of two bitmaps
 {% highlight java %}
 ImageView view = (ImageView) findViewById(R.id.bitmapResult);
 Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
 				R.drawable.src, PorterDuff.Mode.MULTIPLY, true, false);
 view.setImageBitmap(bitmap);
 {% endhighlight %}
-<br/>
-###Addition of two bitmaps
+
+### Addition of two bitmaps
+
 {% highlight java %}
 ImageView view = (ImageView) findViewById(R.id.bitmapResult);
 Bitmap bitmap = BitmapTransform.createBitmap(this,R.drawable.dst,
 				R.drawable.src, PorterDuff.Mode.ADD, true, false);
 view.setImageBitmap(bitmap);
 {% endhighlight %}
-<br/>
-###Fusion mode
+
+### Fusion mode
 
 <img src="/images/AndroidBitmapTransform/Xfermodes.png" />
+
 ##Maven
+
 {% highlight xml %}
 <dependency>
   <groupId>com.github.devnied.AndroidBitmapTransform</groupId>
@@ -61,7 +65,7 @@ view.setImageBitmap(bitmap);
 </dependency>
 {% endhighlight %}
 
-##Useful links
+## Useful links
 
 Project link on GitHub: [AndroidBitmapTransform]
 
