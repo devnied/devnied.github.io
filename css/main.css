@@ -459,6 +459,7 @@ p {
 	padding:0;
 	color:#AAA;
 	vertical-align: top;
+  margin-right: 60px;
 }
 
 .timeslot .sub-title a{
@@ -654,7 +655,7 @@ and (max-width : 600px) {
 		padding: 5px 10px;
 		margin:5px 0;
 		border-radius: 5px;
-		background-color: #EFEFEF;
+		background-color: rgba(239, 239, 239, 0.6);
 	}
 
 	.timeslot{
