@@ -407,7 +407,7 @@ blockquote {
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
-  -webkit-animation: sharpen 0.5s;
+  -webkit-animation: sharpen 1s;
 }
 
 p {
