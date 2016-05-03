@@ -9,7 +9,7 @@ comment: true
 tags: Android Time
 desc: Many games works with waiting time longer or shorter depending on user actions, payments, transport, client management applications have a business model based on accurate timing information.
 ---
-##Introduction
+## Introduction
 
 More and more mobile applications are based on time to work.
 Many games works with waiting time longer or shorter depending on user actions, payments, transport, client management applications have a business model based on accurate timing information.
