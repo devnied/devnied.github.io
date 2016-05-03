@@ -191,7 +191,6 @@ footer a{
 	height: 200px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.4);
 	background-repeat: no-repeat;
-  -webkit-animation: sharpen 0.5s;
 }
 
 .separator.apropos{
@@ -407,7 +406,6 @@ blockquote {
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
-  -webkit-animation: sharpen 1s;
 }
 
 p {
@@ -538,15 +536,6 @@ p {
 code{
 	padding-bottom:7px;
 	padding-top:7px;
-}
-
-@-webkit-keyframes sharpen{
-    from{
-      -webkit-filter: blur(1px);
-    }
-    to {
-      -webkit-filter: blur(0px);
-    }
 }
 
 /*****************************************************************************/
