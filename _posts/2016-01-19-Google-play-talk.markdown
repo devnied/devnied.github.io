@@ -3,7 +3,7 @@ layout: post
 title:  "Applications Payantes sur le PlayStore - Talk"
 date:   2016-01-19 00:00:00
 categories: articles
-img: /images/android/apps-cover.jpg
+img: /images/Android/apps-cover.jpg
 tags: Android
 desc: Mes slides lors de mon talk sur les applications Payantes sur le PlayStore lors de l'API Hour #18 de l'association Clermont'ech.
 ---
