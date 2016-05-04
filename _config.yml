@@ -5,3 +5,5 @@ permalink: none
 title: Julien MILLAU
 safe: true
 lsi: false
+gems:
+  - jekyll-sitemap
