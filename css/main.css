@@ -399,7 +399,7 @@ blockquote {
 /** A propos **/
 
 .gravatar{
-	border-radius: 100%;
+	border-radius: 10%;
 	height: 120px;
 	width: 120px;
 	border: 1px solid #CCC;
