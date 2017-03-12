@@ -2,8 +2,12 @@
 layout: default
 img: /css/img/road.jpg
 sepStyle: home
-subtitle: Articles
+subtitle: Projects
 ---
 
+{% assign categ = 'projects' %}
+{% include posts_list.html %}
+
+<h1>Articles</h1>
 {% assign categ = 'articles' %}
 {% include posts_list.html %}

@@ -2,7 +2,7 @@
 layout: post
 title:  "Bitmap transformation on Android"
 date:   2013-08-10 00:13:37
-categories: articles
+categories: projects
 img: /images/Android/cover.jpg
 tags: Android Bitmap
 desc: AndroidBitmapTransform is an useful library to do Bitmap transformation on Android?
