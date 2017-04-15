@@ -4,7 +4,7 @@ title:  "Manipulation de bit en java (Bit-lib4j)"
 date:   2013-08-07 00:13:37
 categories: projects
 img: /images/bit-manipulation/cover.jpg
-tags: Java Bit
+tags: Java Bit Manipulation
 desc: Librairie permettant de facilité la lecture d’octet (byte) en java, j’ai créé une librairie JAVA permettant de lire et d’écrire depuis/dans un tableau d’octet les différents types JAVA en spécifiant la taille souhaitée.
 ---
 
@@ -41,7 +41,7 @@ bit.getData();      // return 0x61  (0110 0001b)
 <dependency>
   <groupId>com.github.devnied</groupId>
   <artifactId>bit-lib4j</artifactId>
-  <version>1.4.12</version>
+  <version>1.4.13</version>
 </dependency>
 {% endhighlight %}
 

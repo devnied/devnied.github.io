@@ -423,6 +423,11 @@ blockquote {
 	margin: 0px;
 	border: 0px;
 	margin-left: -15px;
+	display: inline;
+}
+
+.link-store{
+	display: block;
 }
 
 .app-doc{
@@ -436,11 +441,16 @@ blockquote {
 	padding: 8px;
 	margin-right: 10px;
 	text-decoration: none;
+	font-style: normal;
 }
 
 .app-doc a:hover{
 	background-color: rgba(189, 189, 189, 0.39);
 	text-decoration: none;
+}
+
+.app-doc a:last-child{
+	margin-right: 0;
 }
 
 .screen{
@@ -748,5 +758,141 @@ and (max-width : 600px) {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
+}
 
+.container-twelve .six.columns {
+	width: calc(50% - 10px);
+}
+
+.column, .columns {
+	float: left;
+	display: inline;
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.pricing-table {
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	-moz-border-radius: 6px;
+	-webkit0border-radius: 6px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.pricing-table .title {
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	display: block;
+	color: #f5f5f5;
+	text-align: center;
+	padding: 12px 0;
+}
+
+.pricing-table.package-one .title {
+	background: #ce5c25;
+	background: -moz-linear-gradient(top, #ce5c25 0%, #c64e1f 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce5c25), color-stop(100%,#c64e1f));
+	background: -webkit-linear-gradient(top, #ce5c25 0%,#c64e1f 100%);
+	background: -o-linear-gradient(top, #ce5c25 0%,#c64e1f 100%);
+	background: -ms-linear-gradient(top, #ce5c25 0%,#c64e1f 100%);
+	background: linear-gradient(to bottom, #ce5c25 0%,#c64e1f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce5c25', endColorstr='#c64e1f',GradientType=0 );
+}
+
+.pricing-table.package-one .price {
+	border-top: 1px solid #e0702d;
+	background: #d26529 url(img/gardient.png) center center no-repeat;
+}
+
+.pricing-table.package-three .title {
+	background: #659943;
+	background: -moz-linear-gradient(top, #659943 0%, #558938 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#659943), color-stop(100%,#558938));
+	background: -webkit-linear-gradient(top, #659943 0%,#558938 100%);
+	background: -o-linear-gradient(top, #659943 0%,#558938 100%);
+	background: -ms-linear-gradient(top, #659943 0%,#558938 100%);
+	background: linear-gradient(to bottom, #659943 0%,#558938 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#659943', endColorstr='#558938',GradientType=0 );
+}
+
+.pricing-table.package-three .price {
+	border-top: 1px solid #74b44c;
+	background: #77a758 url(img/gardient.png) center center no-repeat;
+}
+
+.pricing-table .price {
+	line-height: 32px;
+	font-weight: 600;
+	font-size: 42px;
+	text-transform: normal;
+	display: block;
+	color: #f5f5f5;
+	text-align: center;
+	padding: 0 0 18px 0;
+}
+
+.pricing-table .price span {
+	display: block;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ffffff;
+	margin-top: 0px;
+	line-height: 9px;
+}
+
+.pricing-table .price a {
+	display: block;
+}
+
+.pricing-table .price span a {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.pricing-table .package {
+	margin: 0 !important;
+}
+
+ul:last-child {
+	margin-bottom: 0 !important;
+}
+
+.pricing-table .package li {
+	margin: 0;
+	background: #f5f5f5;
+	padding: 8px 20px;
+	text-align: center;
+	color: #444444;
+	list-style: none;
+}
+
+.pricing-table .package li:nth-child(2n+0) {
+	background: #fff;
+}
+
+.app-version {
+	overflow: hidden;
+}
+
+.app-version img {
+	border: none;
+	border-radius: 0;
+	display: inherit;
+}
+
+.app-version ul{
+	list-style: none outside;
+}
+
+.app-version ul li{
+	line-height: 25px;
+}
+
+.app-version .columns:last-child {
+	margin-right: 0;
 }

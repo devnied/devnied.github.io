@@ -36,9 +36,63 @@ Add your personal favorite currency list.
 </div>
 
 ## Links
-<div class="app-doc">
-    <a href="/">App Legal Notices</a>
-    <a href="/">App Privacy Policy</a>
-    <a href="/">App Terms of Sale</a>
+
+<div class="app-version container-twelve">
+    <div class="pricing-table package-three six columns ">
+        <div class="title">
+            <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27">
+        </div>
+        <div class="price">
+            <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.free" target="_blank" class="no-icon" alt="Download free version">
+                <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+            </a>
+            <span>Free version</span>
+        </div>
+        <ul class="package">
+            <ul>
+                <li>Material design</li>
+                <li>Quick updates</li>
+                <li>Updated exchange rates</li>
+                <li>170+ world currencies</li>
+                <li>Bitcoin support</li>
+                <li>Offline mode</li>
+                <li>Search function</li>
+                <li class="hide">
+                   <div class="app-doc">
+                        <a href="/">App Legal Notices</a>
+                        <a href="/">App Privacy Policy</a>
+                    </div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <div class="pricing-table package-one six columns">
+            <div class="title">
+                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27" >
+            </div>
+            <div class="price">
+                <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.pro" target="_blank" class="no-icon" alt="Download pro version">
+                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+                </a>
+                <span>Pro version</span>
+            </div>
+            <ul class="package">
+                <ul>
+                    <li><b>No ads</b></li>
+                    <li>Material design</li>
+                    <li>Quick updates</li>
+                    <li>Updated exchange rates</li>
+                    <li>170+ world currencies</li>
+                    <li>Bitcoin support</li>
+                    <li>Offline mode</li>
+                    <li>Search function</li>
+                    <li class="hide">
+                       <div class="app-doc">
+                            <a href="/">App Legal Notices</a>
+                            <a href="/">App Privacy Policy</a>
+                        </div>
+                    </li>
+                </ul>
+            </ul>
+        </div>
 </div>
-<a href='https://play.google.com/store/apps/details?id=com.devnied.currency.pro' class="no-icon"><img class="app-link" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
