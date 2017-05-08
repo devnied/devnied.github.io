@@ -57,10 +57,10 @@ Add your personal favorite currency list.
                 <li>Bitcoin support</li>
                 <li>Offline mode</li>
                 <li>Search function</li>
-                <li class="hide">
+                <li>
                    <div class="app-doc">
-                        <a href="/">App Legal Notices</a>
-                        <a href="/">App Privacy Policy</a>
+                        <a href="/android/currency-converter-cgu-en.html" target="_blank">Terms of Use</a>
+                        <a href="/android/currency-converter-privacy-en.html" target="_blank">App Privacy Policy</a>
                     </div>
                 </li>
             </ul>
@@ -86,10 +86,10 @@ Add your personal favorite currency list.
                     <li>Bitcoin support</li>
                     <li>Offline mode</li>
                     <li>Search function</li>
-                    <li class="hide">
+                    <li>
                        <div class="app-doc">
-                            <a href="/">App Legal Notices</a>
-                            <a href="/">App Privacy Policy</a>
+                            <a href="/android/currency-converter-pro-cgu-en.html" target="_blank">Terms of Use</a>
+                            <a href="/android/currency-converter-pro-privacy-en.html" target="_blank">App Privacy Policy</a>
                         </div>
                     </li>
                 </ul>
