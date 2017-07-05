@@ -74,10 +74,10 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
                 <li>Read one card</li>
                 <li>Track 1&2 data</li>
                 <li>Simple history</li>
-                <li class="hide">
+                <li>
                    <div class="app-doc">
-                        <a href="/">App Legal Notices</a>
-                        <a href="/">App Privacy Policy</a>
+                        <a href="/android/credit-card-reader-cgu-en.html">App Legal Notices</a>
+                        <a href="/android/credit-card-reader-privacy-en.html">App Privacy Policy</a>
                     </div>
                 </li>
             </ul>
@@ -102,10 +102,10 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
                     <li>Extended history</li>
                     <li>Export data</li>
                     <li>Disable application launch with NFC</li>
-                    <li class="hide">
+                    <li>
                        <div class="app-doc">
-                            <a href="/">App Legal Notices</a>
-                            <a href="/">App Privacy Policy</a>
+                            <a href="/android/credit-card-reader-pro-cgu-en.html">App Legal Notices</a>
+                            <a href="/android/credit-card-reader-pro-privacy-en.html">App Privacy Policy</a>
                         </div>
                     </li>
                 </ul>
