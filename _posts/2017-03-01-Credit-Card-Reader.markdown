@@ -12,7 +12,7 @@ desc: Credit Card Reader NFC app was made to read public data on an NFC banking 
 Credit Card Reader NFC is an mobile application made to read public data on an NFC banking card compliant with EMV norm.<br/>
 This application is an analysis tool to read contactless NFC EMV credit cards data.
 
-## Fonctionnalities
+## Functionalities
 
 <u>Infos</u>
 

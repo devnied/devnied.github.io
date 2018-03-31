@@ -225,7 +225,7 @@ footer a{
 h1 {
 	text-transform: uppercase;
 	font-size: 24px;
-	margin: 30px 0 30px -27px;
+	margin: 30px 0 15px -27px;
 	padding: 10px 0 10px 23px;
 	border-left: 5px solid #eee;
 	font-weight: 300;
@@ -253,6 +253,10 @@ b {
 	color: #307EA9;
 	text-decoration:none;
 	font-weight: 300;
+}
+
+.posts li a:hover {
+	color: #0c2a37;
 }
 
 .posts li{
@@ -436,16 +440,18 @@ blockquote {
 }
 
 .app-doc a{
-	border: 1px solid rgba(150, 150, 150, 0.71);
+	border: 0.5px solid rgba(81, 81, 81, 0.97);
 	border-radius: 6px;
-	padding: 8px;
+	padding: 4px 8px;
 	margin-right: 10px;
 	text-decoration: none;
 	font-style: normal;
+	background-color: white;
 }
 
 .app-doc a:hover{
-	background-color: rgba(189, 189, 189, 0.39);
+	background-color: rgba(81, 81, 81, 0.97);
+	color: white;
 	text-decoration: none;
 }
 
@@ -714,7 +720,14 @@ and (max-width : 600px) {
 		padding: 5px 10px;
 		margin:5px 0;
 		border-radius: 5px;
+		border: 0.5px solid #0000000f;
 		background-color: rgba(239, 239, 239, 0.6);
+	}
+
+	.posts li a:hover {
+		background-color: rgba(81, 81, 81, 0.76);
+		color: white;
+		transition: all 0.2s ease-out;
 	}
 
 	.timeslot{
@@ -896,4 +909,57 @@ ul:last-child {
 
 .app-version .columns:last-child {
 	margin-right: 0;
+}
+
+ul.list-app {
+	text-align: center;
+	margin: 0 10px 0 10px;
+}
+
+ul.list-app li{
+	display: inline-block;
+	padding-right: 12px;
+}
+
+a.app-icon{
+	display: inline-block;
+	height: 48px;
+	overflow: hidden;
+	position: relative;
+}
+
+img.small-icon{
+	height: 48px;
+	border-radius: 8px;
+}
+
+i.bottom-right{
+	position: absolute;
+	z-index: 2;
+	display: inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 39%;
+	background-color: #fff;
+	padding: 4px;
+	line-height: 0;
+	bottom: -4px;
+	right: -4px;
+	height: 12px;
+	width: 11px;
+}
+
+i.icon-store {
+	display: inline-block;
+	background-image: url(/css/img/store.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	background-size: 12px 25px;
+	width: 12px;
+	height: 12px;
+	left: 4px
+}
+
+i.icon-store.ios{
+	background-position: -1px -14px;
 }

@@ -2,9 +2,64 @@
 layout: default
 img: /css/img/road.jpg
 sepStyle: home
-subtitle: Projects
+subtitle: Applications
 ---
 
+<ul class="list-app">
+    <li>
+        <a href="/projects/Credit-Card-Reader.html#links" class="app-icon" title="Pro Credit Card Reader NFC">
+            <img src="images/credit-card/icon-pro.png" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store android"></i>
+            </i>
+        </a>
+    </li>
+    <li>
+        <a href="/projects/Credit-Card-Reader.html#links" class="app-icon" title="Credit Card Reader NFC (EMV)">
+            <img src="images/credit-card/icon.png" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store android"></i>
+            </i>
+        </a>
+    </li>
+    <li>
+        <a href="/projects/Currency-Converter.html#links" class="app-icon" title="Currency Converter Pro">
+            <img src="images/currency-converter/icon-pro.jpg" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store android"></i>
+            </i>
+        </a>
+    </li>
+    <li>
+        <a href="/projects/Currency-Converter.html#links" class="app-icon" title="Currency Converter free">
+            <img src="images/currency-converter/icon.png" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store android"></i>
+            </i>
+        </a>
+    </li>
+    <li>
+        <a href="https://play.google.com/store/apps/details?id=com.github.devnied.creditcardtester" class="app-icon" title="NFC credit card tester">
+            <img src="images/credit-card-reader/icon.png" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store android"></i>
+            </i>
+        </a>
+    </li>
+    <li>
+        <a href="https://itunes.apple.com/us/app/nfc-tag-reader-pro/id1324286598" class="app-icon" title="NFC Tag Reader Pro">
+            <img src="images/nfc-reader-pro-ios/icon.jpeg" class="small-icon"/>
+            <i class="bottom-right">
+                <i class="icon-store ios"></i>
+            </i>
+        </a>
+    </li>
+</ul>
+
+{% assign categ = 'application' %}
+{% include posts_list.html %}
+
+<h1>Projects</h1>
 {% assign categ = 'projects' %}
 {% include posts_list.html %}
 

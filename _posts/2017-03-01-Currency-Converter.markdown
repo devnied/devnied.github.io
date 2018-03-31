@@ -14,7 +14,7 @@ It provided over 170 currencies with exchange rates and also support offline mod
 This app is easy to use with it's material design for conversion of many foreign currencies directly with the app or from the widget.
 Add your personal favorite currency list.
 
-## Fonctionnalities
+## Functionalities
 
 ★ Material design<br/>
 ★ Quick updates<br/>
