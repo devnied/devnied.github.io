@@ -134,4 +134,4 @@ Date date = SecureDate.getInstance().getDate();
 Actually, to secure date and time on Android we need a connection to a server on each first launch of an application to get the real current date and avoid manuals user modifications.
 
 
-[elapsedRealtime]: http://developer.android.com/reference/android/os/SystemClock.html#elapsedRealtime() "Android developer"
+[elapsedRealtime]: https://developer.android.com/reference/android/os/SystemClock.html#elapsedRealtime() "Android developer"
