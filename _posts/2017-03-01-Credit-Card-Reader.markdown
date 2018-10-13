@@ -39,7 +39,6 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
 * Banrisul (Brazil)
 * Saudi Payments Network (Saudi Arabia)
 * Interac (Canada)
-* Discover Card
 * UnionPay
 * Zentraler Kreditausschuss (Germany)
 * Euro Alliance of Payment Schemes (Italy)
