@@ -71,7 +71,7 @@ Add your personal favorite currency list.
                 <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27" >
             </div>
             <div class="price">
-                <a href="https://play.google.com/store/apps/details?id=ccom.devnied.currency.pro" target="_blank" class="no-icon" alt="Download pro version">
+                <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.pro" target="_blank" class="no-icon" alt="Download pro version">
                     <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
                 </a>
                 <span>Pro version</span>
