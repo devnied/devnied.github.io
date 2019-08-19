@@ -1,6 +1,7 @@
 markdown: kramdown
 highlighter: rouge
 excerpt_separator: ""
+keep_files: [app-ads.txt]
 permalink: none
 title: Julien MILLAU
 safe: true
