@@ -51,37 +51,6 @@ body {
 	color: #eee;
 }
 
-@font-face {
-    font-family: 'Mono Social Icons Font';
-    src: url('font/MonoSocialIconsFont-1.10.eot');
-    src: url('font/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('font/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('font/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('font/MonoSocialIconsFont-1.10.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
-    -webkit-text-rendering: optimizeLegibility;
-    -moz-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
-
-a.symbol:before {
-    content: attr(title);
-    margin-right: 0.3em;
-    font-size: 130%;
-}
 
 /*****************************************************************************/
 /*
@@ -90,7 +59,7 @@ a.symbol:before {
 /*****************************************************************************/
 
 header{
-	margin: 90px 0 35px 0;
+	margin: 90px 0 28px 0;
 }
 
 .name a{
@@ -98,20 +67,18 @@ header{
 	font-weight: 100;
 }
 
-header a, header b{
+header a {
 	color: #444;
 	text-transform: uppercase;
 	text-decoration: none;
-	transition: color 0.25s ease-in;
-	-webkit-transition: color 0.25s ease-in;
 }
 
-header a:hover, header a:hover b {
+header a:hover, header a.active {
 	color: #307EA9;
 }
 
-header a.active{
-	color: #307EA9;
+header a:hover svg{
+	fill: #307EA9;
 }
 
 nav{
@@ -119,6 +86,12 @@ nav{
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+header .sub-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .menu {
@@ -132,8 +105,22 @@ nav{
 	padding-right: 15px;
 }
 
+.social li {
+	display: inline;
+	padding-right: 10px;
+}
+
 .menu a {
 	font-weight: 300;
+}
+
+.social {
+	margin: auto 0;
+}
+
+.social svg {
+	width: 20px;
+	height: 20px;
 }
 
 li {
@@ -148,28 +135,12 @@ li {
   display: none;
 }
 
-.social {
-	margin: -37px 0 0 0;
-	padding: 0;
-	padding-top: 2px;
-	float: right;
-}
-
-.social li {
-	display: inline;
-}
-
-.social li a{
-	font-size: 27px;
-}
-
 footer{
 	padding: 40px 0;
 	border-top: 1px solid #eee;
 	text-align: center;
 	width: 700px;
 	margin: 40px auto 40px auto;
-	text-align:center;
 	font-size:13px;
 }
 
@@ -187,7 +158,7 @@ footer a{
 .separator {
 	background-color: #2B2B2B;
 	background-size: 100% ;
-  background-position: 0 bottom;
+  	background-position: 0 bottom;
 	height: 200px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.4);
 	background-repeat: no-repeat;
@@ -371,33 +342,40 @@ blockquote {
 
 .contact-list{
 	text-align:center;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .contact-list a{
-	font-size:17px;
+	font-size:25px;
 	text-decoration:none;
 	color: #444;
 	line-height: 300%;
 	white-space: nowrap;
-	transition: color 0.25s ease-in;
-	-webkit-transition: color 0.25s ease-in;
+	display: flex;
+	align-items: center;
 }
 
 .contact-list a:hover{
 	color: #307EA9;
 }
 
-.contact-list a .symbol{
-	font-size:50px;
-	vertical-align: top;
-	margin-right:15px;
+.contact-list a:hover svg{
+	fill: #307EA9;
+}
+
+.contact-list a svg {
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
 }
 
 .contact-list li{
-	display: inline-table;
-	width: 26%;
-	margin-right:10px;
-
+	display: inline;
+	margin-right: 80px;
 }
 
 /** A propos **/
@@ -666,12 +644,6 @@ and (max-width : 1024px){
 @media only screen
 and (max-width : 600px) {
 
-	.social {
-		position:absolute;
-		top :58px;
-		right : 10px;
-	}
-
 	.separator {
 		height: 70px;
 	}
@@ -694,25 +666,10 @@ and (max-width : 600px) {
 		text-align:center;
 	}
 
-	.social li:last-child {
-		display: none;
-	}
 
-	.contact-list{
-		text-align:left;
-		margin: 0 auto;
-		display: table;
-	}
 
-	.contact-list li{
-		display: block;
-		width:auto;
-		margin:0;
-	}
-
-	.contact-list li a{
-		display: block;
-		overflow: hidden;
+	.contact-list {
+		flex-direction: column;
 	}
 
 	.posts li a{

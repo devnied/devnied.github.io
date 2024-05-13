@@ -16,7 +16,7 @@ $(function(){
 		}
 	});
 
-	if ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false ){
+	if ( !!navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ){
 		$("body").scrollTop(1);
 	}
 
@@ -31,7 +31,7 @@ $(function(){
 	// iOS WebApp
 	if ( navigator.standalone ){
 		$("a").click(function (event) {
-			if ( $(this).attr("href").indexOf("/") == 0) {
+			if ( $(this).attr("href").indexOf("/") === 0) {
 				event.preventDefault();
 				window.location = $(this).attr("href");
 			}
@@ -50,7 +50,7 @@ $(function(){
 			 	}
 			 	tag = tag.toLowerCase();
 
-				if ( $(context).attr("rel").toLowerCase().indexOf(tag+",") == -1 ){
+				if ( $(context).attr("rel").toLowerCase().indexOf(tag+",") === -1 ){
 					$(context).hide();
 				}else{
 					$(context).show();
