@@ -350,7 +350,7 @@ blockquote {
 }
 
 .contact-list a{
-	font-size:25px;
+	font-size:16px;
 	text-decoration:none;
 	color: #444;
 	line-height: 300%;
@@ -368,8 +368,8 @@ blockquote {
 }
 
 .contact-list a svg {
-	height: 50px;
-	width: 50px;
+	height: 30px;
+	width: 30px;
 	margin-right: 10px;
 }
 
