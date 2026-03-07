@@ -7,7 +7,7 @@ img: /images/currency-converter/cover.jpg
 tags: Android Currency Converter Apps
 desc: Currency converter Android application with over 190 currencies, widget, updated conversion rates and offline mode.
 ---
-<img class="icon-app" src="/images/currency-converter/icon-pro.jpg"/>
+<img class="icon-app" src="/images/currency-converter/icon-pro.png"/>
 
 Currency Converter is an mobile application used to get world's foreign currencies conversion rates.
 It provided over 190 currencies with exchange rates and also support offline mode, so it's an ideal ideal companion for your trip abroad.
