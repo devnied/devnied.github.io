@@ -1,5 +1,4 @@
-# Rendered by tools/generate.mjs — review the generator and the copy packs,
-# not 200 near-identical HTML diffs.
+# Rendered by tools/build.mjs — review the generator, not 200 near-identical
+# HTML diffs.
 pages/currency/** linguist-generated=true
-tools/state/*.json linguist-generated=true
 llms.txt linguist-generated=true

@@ -4,7 +4,7 @@
 #
 # jekyll-sitemap is not used because it emits no <lastmod> for pages and cannot
 # emit <xhtml:link> hreflang alternates. Both come from front matter that
-# tools/generate.mjs writes into each generated page, and tools/validate.mjs
+# tools/build.mjs writes into each generated page, and its validation pass
 # fails the build if a page that should carry them does not.
 #
 # A page opts out with `sitemap: false` or `noindex: true`.
