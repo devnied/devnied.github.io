@@ -1,1 +1,19 @@
+# https://julien-millau.fr/robots.txt
+#
+# Everything is open to everyone — search crawlers and AI crawlers alike. This
+# site publishes free apps: there is no paywall and no ad inventory, so there is
+# nothing to protect and everything to gain from being readable.
+#
+# There are deliberately no per-crawler rules. A crawler obeys exactly one
+# group, the most specific one matching its name, so a bot with no group of its
+# own falls under `*` and is already allowed. Naming GPTBot, ClaudeBot,
+# PerplexityBot and the rest with `Allow: /` would change nothing.
+#
+# Nothing is disallowed either — including /apropos/, which carries its own
+# noindex. A crawler that cannot fetch a page can never read that noindex, so
+# blocking it would keep it indexable instead of removing it.
+
 User-agent: *
+Allow: /
+
+Sitemap: https://julien-millau.fr/sitemap.xml

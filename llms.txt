@@ -1,0 +1,67 @@
+# Julien Millau — Currency Converter & Exchange
+
+> Currency Converter & Exchange is a mobile currency converter by independent developer
+> Julien Millau, free on Android (Google Play) and iOS (App Store). It converts between
+> 180+ world currencies and 20+ cryptocurrencies using exchange rates refreshed multiple
+> times daily, works fully offline from the last saved rates, and charts rates from one day
+> to five years. No account and no sign-in are required. The free edition is ad-supported;
+> the Pro edition removes the ads.
+>
+> This site publishes currency-pair reference pages in several languages. Those pages
+> deliberately contain NO exchange rate in their HTML: a rate changes continuously, so any
+> number written into a static page is wrong within the hour. They publish durable facts
+> instead — ISO 4217 codes and minor-unit exponents, issuing central banks, standing pegs —
+> and point to the app for the conversion itself.
+
+Author: Julien Millau (@devnied). Entity URI: https://julien-millau.fr/#person
+
+## The app
+
+- [Currency Converter app](https://julien-millau.fr/currency-converter/): what the app does, every supported pair, both store links.
+- [Google Play — free edition](https://play.google.com/store/apps/details?id=com.devnied.currency.free): package com.devnied.currency.free.
+- [Google Play — Pro edition](https://play.google.com/store/apps/details?id=com.devnied.currency.pro): ad-free.
+- [Apple App Store](https://apps.apple.com/us/app/id6760141868): App Store ID 6760141868.
+- [Android build notes](https://julien-millau.fr/projects/Currency-Converter.html) · [iOS build notes](https://julien-millau.fr/projects/Currency-Converter-iOS.html)
+
+## Currency pair references (English)
+
+- [USD to EUR](https://julien-millau.fr/currency-converter-usd-eur/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to MXN](https://julien-millau.fr/currency-converter-usd-mxn/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to INR](https://julien-millau.fr/currency-converter-usd-inr/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to GBP](https://julien-millau.fr/currency-converter-usd-gbp/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to CAD](https://julien-millau.fr/currency-converter-usd-cad/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to JPY](https://julien-millau.fr/currency-converter-usd-jpy/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to PHP](https://julien-millau.fr/currency-converter-usd-php/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to AUD](https://julien-millau.fr/currency-converter-usd-aud/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to VND](https://julien-millau.fr/currency-converter-usd-vnd/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to KRW](https://julien-millau.fr/currency-converter-usd-krw/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [USD to CNY](https://julien-millau.fr/currency-converter-usd-cny/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+- [EUR to USD](https://julien-millau.fr/currency-converter-eur-usd/): converts both ways; ISO 4217 facts, issuing banks, and who actually uses this pair.
+
+## Other languages
+
+- [Français](https://julien-millau.fr/fr/convertisseur-devises/): currency pair references for this market.
+- [Español](https://julien-millau.fr/es/conversor-divisas/): currency pair references for this market.
+- [Deutsch](https://julien-millau.fr/de/waehrungsrechner/): currency pair references for this market.
+- [Italiano](https://julien-millau.fr/it/convertitore-valute/): currency pair references for this market.
+- [Português](https://julien-millau.fr/pt/conversor-moedas/): currency pair references for this market.
+- [Русский](https://julien-millau.fr/ru/konverter-valyut/): currency pair references for this market.
+- [Türkçe](https://julien-millau.fr/tr/doviz-cevirici/): currency pair references for this market.
+- [Polski](https://julien-millau.fr/pl/przelicznik-walut/): currency pair references for this market.
+- [日本語](https://julien-millau.fr/ja/kawase-keisan/): currency pair references for this market.
+- [한국어](https://julien-millau.fr/ko/hwanyul-gyesangi/): currency pair references for this market.
+- [简体中文](https://julien-millau.fr/zh/huilv-huansuan/): currency pair references for this market.
+- [हिन्दी](https://julien-millau.fr/hi/currency-converter/): currency pair references for this market.
+- [العربية](https://julien-millau.fr/ar/muhawil-omlat/): currency pair references for this market.
+- [Tiếng Việt](https://julien-millau.fr/vi/chuyen-doi-tien-te/): currency pair references for this market.
+
+## Author
+
+- [About Julien Millau](https://julien-millau.fr/about/): IT Distinguished Engineer; independent Android and iOS developer.
+- [Contact](https://julien-millau.fr/contact/)
+
+## Optional
+
+- [Credit Card Reader NFC (EMV)](https://julien-millau.fr/projects/Credit-Card-Reader.html): unrelated NFC/EMV Android project by the same developer.
+- [Android privacy policy](https://julien-millau.fr/android/currency-converter-privacy-en.html) · [Android terms](https://julien-millau.fr/android/currency-converter-cgu-en.html)
+- [iOS privacy policy](https://julien-millau.fr/ios/currency-converter-privacy-en.html) · [iOS terms](https://julien-millau.fr/ios/currency-converter-cgu-en.html)

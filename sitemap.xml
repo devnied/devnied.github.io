@@ -1,0 +1,46 @@
+---
+# Rendered by Jekyll on every build, so a new post or page appears here without
+# anyone remembering to regenerate anything.
+#
+# jekyll-sitemap is not used because it emits no <lastmod> for pages and cannot
+# emit <xhtml:link> hreflang alternates. Both come from front matter that
+# tools/generate.mjs writes into each generated page, and tools/validate.mjs
+# fails the build if a page that should carry them does not.
+#
+# A page opts out with `sitemap: false` or `noindex: true`.
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for page in site.pages -%}
+{%- unless page.sitemap == false or page.noindex or page.url contains '.xml' or page.url contains '.txt' or page.url contains '.json' %}
+  <url>
+    <loc>{{ page.url | replace: 'index.html', '' | absolute_url }}</loc>
+    {%- if page.lastmod %}
+    <lastmod>{{ page.lastmod }}</lastmod>
+    {%- endif %}
+    {%- for alt in page.alternates %}
+    <xhtml:link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.href }}"/>
+    {%- endfor %}
+  </url>
+{%- endunless -%}
+{%- endfor -%}
+{%- for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  </url>
+{%- endfor -%}
+{%- comment -%}
+  The privacy and terms pages under android/ and ios/ are plain HTML with no
+  front matter, so Jekyll copies them verbatim and they are static files, not
+  pages. Without this loop they would silently drop out of the sitemap.
+{%- endcomment -%}
+{%- for file in site.static_files %}
+{%- if file.extname == '.html' %}
+  <url>
+    <loc>{{ file.path | absolute_url }}</loc>
+  </url>
+{%- endif -%}
+{%- endfor %}
+</urlset>

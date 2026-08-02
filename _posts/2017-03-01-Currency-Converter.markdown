@@ -5,12 +5,13 @@ date:   2017-03-01 01:00:00
 categories: projects
 img: /images/currency-converter/cover.jpg
 tags: Android Currency Converter Apps
-desc: Currency converter Android application with over 190 currencies, widget, updated conversion rates and offline mode.
+desc: Currency converter Android application with over 180 currencies, widget, updated conversion rates and offline mode.
 ---
 <img class="icon-app" src="/images/currency-converter/icon-pro.png"/>
 
 Currency Converter is an mobile application used to get world's foreign currencies conversion rates.
-It provided over 190 currencies with exchange rates and also support offline mode, so it's an ideal ideal companion for your trip abroad.
+The full product page, with every supported currency pair, lives at [Currency Converter &amp; Exchange](/currency-converter/).
+It provided over 180 currencies with exchange rates and also support offline mode, so it's an ideal ideal companion for your trip abroad.
 This app is easy to use with it's material design for conversion of many foreign currencies directly with the app or from the widget.
 Add your personal favorite currency list.
 
@@ -19,7 +20,7 @@ Add your personal favorite currency list.
 ★ Material design<br/>
 ★ Quick updates<br/>
 ★ Updated exchange rates<br/>
-★ 190+ world currencies<br/>
+★ 180+ world currencies<br/>
 ★ Convert multiple currencies<br/>
 ★ Bitcoin support<br/>
 ★ Materials currencies (Gold, Silver, Platinum, palladium)<br/>
@@ -53,7 +54,7 @@ Add your personal favorite currency list.
                 <li>Material design</li>
                 <li>Quick updates</li>
                 <li>Updated exchange rates</li>
-                <li>190+ world currencies</li>
+                <li>180+ world currencies</li>
                 <li>Bitcoin support</li>
                 <li>Offline mode</li>
                 <li>Search function</li>
@@ -82,7 +83,7 @@ Add your personal favorite currency list.
                     <li>Material design</li>
                     <li>Quick updates</li>
                     <li>Updated exchange rates</li>
-                    <li>190+ world currencies</li>
+                    <li>180+ world currencies</li>
                     <li>Bitcoin support</li>
                     <li>Offline mode</li>
                     <li>Search function</li>

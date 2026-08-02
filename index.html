@@ -1,64 +1,115 @@
 ---
 layout: default
+permalink: /
 img: /css/img/road.jpg
 sepStyle: home
 subtitle: Applications
+seo_title: "Julien Millau — Android &amp; iOS apps"
+desc: "The Android and iOS apps built by Julien Millau: Currency Converter &amp; Exchange, Credit Card Reader NFC (EMV) and NFC Tag Reader Pro."
 ---
 
-<ul class="list-app">
-    <li>
-        <a href="/projects/Credit-Card-Reader.html#links" class="app-icon" title="Pro Credit Card Reader NFC">
-            <img src="images/credit-card/icon-pro.png" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store android"></i>
-            </i>
+<ul class="app-cards">
+    <li class="app-card">
+        <div class="app-card-top">
+            <img class="app-card-icon" src="/images/currency-converter/icon-pro.png" alt="" width="72" height="72"/>
+            <div class="app-card-id">
+                <h2>Currency Converter &amp; Exchange</h2>
+                <p class="app-card-tags">
+                    <span class="app-tag">Android</span>
+                    <span class="app-tag">iOS</span>
+                    <span class="app-tag app-tag-cat">Finance</span>
+                </p>
+            </div>
+        </div>
+        <p class="app-card-desc">Converts 180+ world currencies and 20+ cryptocurrencies. Live rates,
+           full offline mode, charts from one day to five years, and a home-screen widget.
+           No account and no sign-in.</p>
+        <ul class="app-badges">
+            <li class="badge-google"><a href="https://play.google.com/store/apps/details?id=com.devnied.currency.free" target="_blank" rel="noopener">
+                <img src="/images/badges/en/google-play.png" width="176" height="68" alt="Currency Converter &amp; Exchange on Google Play" loading="lazy"/>
+            </a></li>
+            <li class="badge-apple"><a href="https://apps.apple.com/us/app/currency-converter-rates-pro/id6760141868" target="_blank" rel="noopener">
+                <img src="/images/badges/en/app-store.svg" width="138" height="46" alt="Currency Converter &amp; Rates Pro on the App Store" loading="lazy"/>
+            </a></li>
+        </ul>
+        <a class="app-pro" href="https://play.google.com/store/apps/details?id=com.devnied.currency.pro" target="_blank" rel="noopener">
+            <span class="app-pro-tag">PRO</span>
+            <span class="app-pro-text">
+                <strong>Currency Converter Pro</strong>
+                <span>The same app on Google Play, without ads</span>
+            </span>
+            <span class="app-pro-go" aria-hidden="true">&rarr;</span>
+        </a>
+        <div class="app-pairs">
+            <a class="app-pairs-main" href="/currency-converter/">
+                <span class="app-pairs-tag">WEB</span>
+                <span class="app-pro-text">
+                    <strong>Currency pair pages</strong>
+                    <span>12 pairs explained &mdash; what each currency is, who issues it, what moves the rate</span>
+                </span>
+                <span class="app-pro-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <nav class="app-pairs-langs" aria-label="Currency pair pages by language">
+                <ul>{% include currency-locales.html %}</ul>
+            </nav>
+        </div>
+    </li>
+
+    <li class="app-card">
+        <div class="app-card-top">
+            <img class="app-card-icon" src="/images/credit-card/icon-pro.png" alt="" width="72" height="72"/>
+            <div class="app-card-id">
+                <h2>Credit Card Reader NFC (EMV)</h2>
+                <p class="app-card-tags">
+                    <span class="app-tag">Android</span>
+                    <span class="app-tag app-tag-cat">Tools</span>
+                </p>
+            </div>
+        </div>
+        <p class="app-card-desc">Reads the public data an EMV bank card broadcasts over NFC &mdash; card
+           number, expiry date and transaction log &mdash; using the open-source
+           EMV-NFC-Paycard-Enrollment library.</p>
+        <ul class="app-badges">
+            <li class="badge-google"><a href="https://play.google.com/store/apps/details?id=com.github.devnied.emvnfccard" target="_blank" rel="noopener">
+                <img src="/images/badges/en/google-play.png" width="176" height="68" alt="Credit Card Reader NFC on Google Play" loading="lazy"/>
+            </a></li>
+        </ul>
+        <a class="app-pro" href="https://play.google.com/store/apps/details?id=com.github.devnied.emvnfccard.pro" target="_blank" rel="noopener">
+            <span class="app-pro-tag">PRO</span>
+            <span class="app-pro-text">
+                <strong>Credit Card Reader Pro</strong>
+                <span>The same app on Google Play, without ads</span>
+            </span>
+            <span class="app-pro-go" aria-hidden="true">&rarr;</span>
         </a>
     </li>
-    <li>
-        <a href="/projects/Credit-Card-Reader.html#links" class="app-icon" title="Credit Card Reader NFC (EMV)">
-            <img src="images/credit-card/icon.png" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store android"></i>
-            </i>
-        </a>
-    </li>
-    <li>
-        <a href="/projects/Currency-Converter.html#links" class="app-icon" title="Currency Converter Pro">
-            <img src="images/currency-converter/icon-pro.png" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store android"></i>
-            </i>
-        </a>
-    </li>
-    <li>
-        <a href="/projects/Currency-Converter.html#links" class="app-icon" title="Currency Converter free">
-            <img src="images/currency-converter/icon.png" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store android"></i>
-            </i>
-        </a>
-    </li>
-    <li>
-        <a href="https://itunes.apple.com/us/app/nfc-tag-reader-pro/id1324286598" class="app-icon" title="NFC Tag Reader Pro">
-            <img src="images/nfc-reader-pro-ios/icon.jpeg" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store ios"></i>
-            </i>
-        </a>
-    </li>
-    <li>
-        <a href="/projects/Currency-Converter-iOS.html#links" class="app-icon" title="Currency Converter iOS">
-            <img src="images/currency-converter/icon.png" class="small-icon"/>
-            <i class="bottom-right">
-                <i class="icon-store ios"></i>
-            </i>
-        </a>
+
+    <li class="app-card">
+        <div class="app-card-top">
+            <img class="app-card-icon" src="/images/nfc-reader-pro-ios/icon.jpeg" alt="" width="72" height="72"/>
+            <div class="app-card-id">
+                <h2>NFC Tag Reader Pro</h2>
+                <p class="app-card-tags">
+                    <span class="app-tag">iOS</span>
+                    <span class="app-tag app-tag-cat">Tools</span>
+                </p>
+            </div>
+        </div>
+        <p class="app-card-desc">Reads and decodes NFC tags on iPhone: NDEF records, URLs, contacts and
+           raw payloads, together with the tag&rsquo;s own technical characteristics.</p>
+        <ul class="app-badges">
+            <li class="badge-apple"><a href="https://itunes.apple.com/us/app/nfc-tag-reader-pro/id1324286598" target="_blank" rel="noopener">
+                <img src="/images/badges/en/app-store.svg" width="138" height="46" alt="NFC Tag Reader Pro on the App Store" loading="lazy"/>
+            </a></li>
+        </ul>
     </li>
 </ul>
 
-{% assign categ = 'application' %}
-{% include posts_list.html %}
-
-<h1>Projects</h1>
+<h2 class="app-notes-title">Screenshots &amp; write-ups</h2>
+{%- comment -%}
+  These three posts are the only place on the site with app screenshots, and the
+  two 2017 ones carry years of indexing history. The home page is now their only
+  inbound link, so this section is what keeps them from being orphaned.
+{%- endcomment -%}
 {% assign categ = 'projects' %}
 {% include posts_list.html %}

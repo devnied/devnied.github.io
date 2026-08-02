@@ -23,6 +23,22 @@ $(function(){
 	// Email
 	$(".mail").attr("href","mai"+"lto"+":mx"+"julien"+"@"+"gmail"+"."+"com");
 
+	// <details> has no built-in light dismiss: without this the language list
+	// stays open until you click the summary again.
+	$(document).on("click", function(e){
+		$("details.cc-langs-toggle[open]").each(function(){
+			if ( !this.contains(e.target) ){
+				this.removeAttribute("open");
+			}
+		});
+	});
+
+	$(document).on("keyup", function(e){
+		if ( e.key === "Escape" ){
+			$("details.cc-langs-toggle[open]").removeAttr("open");
+		}
+	});
+
 	$( ".back" ).click(function() {
 	  	window.location = selected.attr('href');
 	});

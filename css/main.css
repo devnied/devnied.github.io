@@ -51,7 +51,6 @@ body {
 	color: #eee;
 }
 
-
 /*****************************************************************************/
 /*
 /* Header
@@ -74,7 +73,8 @@ header a {
 }
 
 header a:hover, header a.active {
-	color: #307EA9;
+	/* #307EA9 on white is 3.9:1; nav text is not large text, so it needs 4.5:1. */
+	color: #2a6f96;
 }
 
 header a:hover svg{
@@ -221,7 +221,9 @@ b {
 }
 
 .posts li a, .posts li a:visited{
-	color: #307EA9;
+	/* #307EA9 is 3.9:1 on white; these links render at 23.8px, just under the
+	   24px large-text threshold, so they need the full 4.5:1. */
+	color: #2a6f96;
 	text-decoration:none;
 	font-weight: 300;
 }
@@ -470,7 +472,6 @@ p {
 	margin-left: -2px;
 }
 
-
 .timeslot {
 	width: 432px;
 	float: left;
@@ -665,8 +666,6 @@ and (max-width : 600px) {
 	.menu{
 		text-align:center;
 	}
-
-
 
 	.contact-list {
 		flex-direction: column;
@@ -919,4 +918,768 @@ i.icon-store {
 
 i.icon-store.ios{
 	background-position: -1px -14px;
+}
+
+/*****************************************************************************/
+/*
+/* Application cards (home page)
+/*
+/*****************************************************************************/
+
+/* The write-ups sit under the cards; the theme's default h2 is 1.8em, which
+   would out-weigh the card titles above it. */
+.app-notes-title {
+	font-size: 20px;
+	font-weight: 400;
+	color: #444;
+	margin: 34px 0 6px;
+}
+
+/* Sizes here are absolute, not em. The theme gives `li` a font-size of its own,
+   so an em on a card inside a list compounds: the card title came out at 28px,
+   larger than the page's own h1. */
+
+/*
+ * The theme has no global `box-sizing: border-box` — its own layout relies on
+ * content-box (`.timeslot` is width 432 plus 110 of padding). So padding here
+ * was adding to the width instead of fitting inside it: the language row came
+ * out 82px wider than its container and `overflow: hidden` swallowed the last
+ * item. Scoped to these components so the rest of the theme is untouched.
+ */
+.app-cards,
+.app-cards *,
+.app-cards *:before,
+.app-cards *:after {
+	box-sizing: border-box;
+}
+
+.app-cards {
+	list-style: none;
+	margin: 24px 0 0;
+	padding: 0;
+}
+
+.app-card {
+	font-size: 15px;
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	border-radius: 10px;
+	padding: 24px 26px 20px;
+	margin-bottom: 18px;
+	transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.app-card:hover {
+	border-color: #d4dde2;
+	box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.app-card-top {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+/* 22.5% of the width is the corner radius both stores use on app icons. */
+.app-card-icon {
+	width: 72px;
+	height: 72px;
+	border-radius: 16px;
+	flex: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,.14);
+}
+
+.app-card-id h2 {
+	font-size: 22px;
+	font-weight: 400;
+	margin: 0;
+	color: #333;
+	line-height: 1.25;
+}
+
+.app-card-tags {
+	margin: 6px 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.app-tag {
+	display: inline-block;
+	padding: 2px 9px;
+	border-radius: 10px;
+	background: #eef4f7;
+	/* #4a7f9c on #eef4f7 was 3.3:1 — below the 4.5:1 AA threshold for body text. */
+	color: #2c6482;
+	font-size: 12.5px;
+	line-height: 1.6;
+}
+
+.app-tag-cat {
+	background: #f2f2f2;
+	color: #666;
+}
+
+.app-card-desc {
+	font-size: 17px;
+	line-height: 1.65;
+	font-weight: 300;
+	color: #3d3d3d;
+	margin: 14px 0 0;
+	/* 654px at 17px is still ~77 characters; 62ch lands inside the comfortable
+	   45–75 range without narrowing the card itself. */
+	max-width: 62ch;
+}
+
+/*
+ * Official store artwork, used as supplied.
+ *
+ * The two badges cannot share a height. Google ships its badge with the clear
+ * space baked into the image — 646x250 of which only 564x168 is ink, so 67.2%
+ * — while Apple's SVG is all ink at 120x40. Rendered at the same height the
+ * Google button looks a third smaller. 68px against 46px makes the two visible
+ * buttons the same size, which is what both guidelines actually ask for.
+ */
+.app-badges {
+	list-style: none;
+	margin: 14px 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px;
+}
+
+.app-badges li {
+	margin: 0;
+}
+
+.app-badges a {
+	display: block;
+}
+
+.app-badges a:hover {
+	opacity: .85;
+}
+
+.app-badges a:after {
+	content: none !important;
+}
+
+.app-badges img {
+	display: block;
+	width: auto;
+}
+
+.app-badges .badge-google img {
+	height: 68px;
+}
+
+.app-badges .badge-apple img {
+	height: 46px;
+	margin: 0 11px;
+}
+
+/*
+ * Pro edition.
+ *
+ * A text link next to two official store badges carried no weight at all, so
+ * this is a row of its own: a tag, a title, a one-line reason and an arrow.
+ * Amber rather than the site blue, so it reads as a different kind of thing
+ * from the free download above it rather than as another link.
+ */
+.app-pro {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 14px;
+	padding: 10px 14px;
+	border: 1px solid #ecdcb4;
+	border-radius: 8px;
+	background: #fdf8ed;
+	text-decoration: none;
+	transition: border-color .15s ease, background .15s ease;
+}
+
+.app-pro:hover {
+	border-color: #d9b96a;
+	background: #fbf2e0;
+	text-decoration: none;
+}
+
+.app-pro:after {
+	content: none !important;
+}
+
+.app-pro-tag {
+	flex: none;
+	padding: 3px 9px;
+	border-radius: 5px;
+	background: #7a5200;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .09em;
+}
+
+.app-pro-text {
+	flex: 1;
+	min-width: 0;
+	line-height: 1.4;
+}
+
+.app-pro-text strong {
+	display: block;
+	font-size: 15px;
+	font-weight: 500;
+	color: #6b4700;
+}
+
+.app-pro-text span {
+	display: block;
+	font-size: 13.5px;
+	color: #8a6a2f;
+}
+
+.app-pro-go {
+	flex: none;
+	color: #8a6a2f;
+	font-size: 16px;
+}
+
+.app-pro:hover .app-pro-go {
+	color: #6b4700;
+}
+
+/*
+ * The route into the 180 currency-pair pages.
+ *
+ * This was a small text link with a caret, sitting under the Pro block — the
+ * least prominent thing on the card, pointing at the largest part of the site.
+ * It is now a peer of the Pro row, in the site blue so the two read as two
+ * different offers rather than a repeat.
+ */
+.app-pairs {
+	margin-top: 10px;
+	border: 1px solid #dfe8ee;
+	border-radius: 8px;
+	background: #f6fafc;
+	overflow: hidden;
+}
+
+.app-pairs-main {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 14px;
+	text-decoration: none;
+	transition: background .15s ease;
+}
+
+.app-pairs-main:hover {
+	background: #eef5f9;
+	text-decoration: none;
+}
+
+.app-pairs-main:after {
+	content: none !important;
+}
+
+.app-pairs-tag {
+	flex: none;
+	padding: 3px 9px;
+	border-radius: 5px;
+	background: #2a6f96;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .09em;
+}
+
+.app-pairs-main strong {
+	color: #205373;
+}
+
+.app-pairs-main .app-pro-text span {
+	color: #4a7791;
+}
+
+.app-pairs-main .app-pro-go {
+	color: #4a7791;
+}
+
+.app-pairs-main:hover .app-pro-go {
+	color: #205373;
+}
+
+/* The theme styles the `nav` ELEMENT globally for the site header —
+   `nav { width: 700px; margin: 0 auto; padding: 0 15px }` — which also hit this
+   one and made it 54px wider than its container, pushing 한국어 out of the
+   rounded box and under `overflow: hidden`. Reset what that rule imposes. */
+.app-pairs-langs {
+	width: auto;
+	margin: 0;
+	border-top: 1px solid #e4edf2;
+	padding: 9px 14px 10px;
+}
+
+.app-pairs-langs ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.app-pairs-langs li {
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* A middot between items rather than a border or a chip: fifteen chips would
+   out-shout the row above them, which is the actual destination. */
+.app-pairs-langs li + li:before {
+	content: "·";
+	margin: 0 7px;
+	color: #b7cbd8;
+}
+
+.app-pairs-langs a,
+.app-pairs-langs a:visited {
+	color: #4a7791;
+	text-decoration: none;
+}
+
+.app-pairs-langs a:hover {
+	color: #205373;
+	text-decoration: underline;
+}
+
+.app-pairs-langs a:after {
+	content: none !important;
+}
+
+.app-card-foot {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px 18px;
+	margin-top: 14px;
+	padding-top: 12px;
+	border-top: 1px solid #f0f0f0;
+	font-size: 14px;
+}
+
+.app-card-foot > a,
+.app-card-foot > a:visited {
+	color: #2a6f96;
+	text-decoration: none;
+}
+
+.app-card-foot > a:hover {
+	color: #0c2a37;
+	text-decoration: underline;
+}
+
+.app-card-foot a:after {
+	content: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.app-cards {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.app-card {
+		padding: 16px 14px 14px;
+	}
+
+	.app-card-icon {
+		width: 60px;
+		height: 60px;
+		border-radius: 13px;
+	}
+
+	.app-card-id h2 {
+		font-size: 18px;
+	}
+
+	.app-card-foot {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+/*****************************************************************************/
+/*
+/* Currency pages (/currency-converter/ and the pair pages)
+/*
+/*****************************************************************************/
+
+/* The theme sizes p at 1.1em of a 13px body — 14.3px, far too small next to an
+   18px lead — and underlines every h3. Both are reset inside .cc only. */
+.cc p {
+	font-size: 16px;
+	line-height: 1.65;
+	margin: 0 0 10px;
+	padding: 0;
+	max-width: 68ch;
+}
+
+.cc h2 {
+	font-size: 21px;
+	font-weight: 500;
+	margin: 28px 0 6px;
+}
+
+.cc h3 {
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	margin: 16px 0 4px;
+}
+
+.cc a { color: #2a6f96; }
+
+/* The theme has no global box-sizing and sizes li/p in em, which compounds. */
+.cc-top, .cc-top *, .cc-cta, .cc-cta *, .cc-pairgrid *, .cc-facts-grid * {
+	box-sizing: border-box;
+}
+
+.cc-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 12px;
+	margin: -6px 0 14px;
+}
+
+.cc-crumb {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: #6b6b6b;
+}
+
+.cc-crumb a {
+	color: #5f5f5f;
+	text-decoration: underline;
+}
+
+/* Language selector */
+
+.cc-langs-toggle {
+	position: relative;
+	flex: none;
+	font-size: 13px;
+}
+
+.cc-langs-toggle summary {
+	cursor: pointer;
+	list-style: none;
+	padding: 4px 10px;
+	border: 1px solid #dfe8ee;
+	border-radius: 999px;
+	color: #444;
+	white-space: nowrap;
+}
+
+.cc-langs-toggle summary::-webkit-details-marker { display: none; }
+.cc-langs-toggle summary:hover { border-color: #b7cbd8; }
+
+.cc-langs-toggle i {
+	font-style: normal;
+	margin-right: 6px;
+}
+
+.cc-langs-toggle nav {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	z-index: 5;
+	margin-top: 4px;
+	background: #fff;
+	border: 1px solid #dfe8ee;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,.09);
+	min-width: 330px;
+	max-width: calc(100vw - 30px);
+	overflow-y: auto;
+}
+
+.cc-langs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 4px;
+	gap: 0 2px;
+}
+
+.cc-langs li { font-size: 14px; line-height: 1.2; }
+
+.cc-langs a, .cc-langs .is-current {
+	display: block;
+	padding: 6px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #2a6f96;
+	white-space: nowrap;
+}
+
+.cc-langs .is-current { color: #6b6b6b; }
+.cc-langs a:hover { background: #f2f7fa; }
+
+/* Lead + store call to action */
+
+.cc-lead {
+	font-size: 18px;
+	line-height: 1.6;
+	color: #333;
+	max-width: 62ch;
+}
+
+.cc-cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 12px;
+	margin: 22px 0 8px;
+	padding: 20px;
+	border: 1px solid #e4edf2;
+	border-radius: 10px;
+	background: #f8fbfc;
+}
+
+.cc-cta-icon { flex: none; border: 0; margin: 0; border-radius: 14px; }
+
+/* .cc p caps paragraphs at 68ch, which made this narrower than the box and
+   pushed its centred text off-centre. Same specificity, declared later. */
+.cc-cta p { max-width: none; }
+.cc-cta-body { width: 100%; min-width: 0; }
+
+.cc-cta-title {
+	font-size: 16px;
+	font-weight: 500;
+	color: #333;
+	margin: 0 0 8px;
+	padding: 0;
+}
+
+.cc-badges {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 4px 14px;
+	margin: 0;
+}
+
+.cc-badges li { line-height: 0; }
+.cc-badges img { display: block; border: 0; }
+/* Google ships ~67% ink inside its badge, Apple ships none. */
+.cc-badges li:first-child img { margin: 0 -6px; }
+
+.cc-editions {
+	margin: 14px auto 0;
+	border-top: 1px solid #e4edf2;
+	padding-top: 10px;
+	max-width: 560px;
+}
+
+.cc-editions li { font-size: 14px; line-height: 1.5; }
+
+.cc-editions a {
+	color: #2a6f96;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.cc-editions a:hover { text-decoration: underline; }
+.cc-editions b { color: #333; font-weight: 500; }
+.cc-editions span { color: #6b6b6b; }
+.cc-editions a { margin-left: 4px; white-space: nowrap; text-decoration: underline; }
+
+/* Body sections */
+
+.cc-features, .cc-howto ol, .cc-corridor ul { margin: 6px 0 18px; }
+
+.cc-features li, .cc-corridor li {
+	font-size: 16px;
+	line-height: 1.6;
+	list-style: square;
+	margin-left: 22px;
+}
+
+.cc-howto li {
+	font-size: 16px;
+	line-height: 1.6;
+	list-style: decimal;
+	margin-left: 24px;
+}
+
+.cc-facts-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 10px 0 20px;
+}
+
+.cc-facts-col {
+	flex: 1 1 300px;
+	border: 1px solid #e4edf2;
+	border-radius: 10px;
+	padding: 14px 16px;
+}
+
+.cc-facts-col h3 {
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	margin: 0 0 8px;
+}
+
+.cc-facts-col dl > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 5px 0;
+	border-bottom: 1px solid #f0f5f8;
+	font-size: 14px;
+}
+
+.cc-facts-col dl > div:last-child { border-bottom: 0; }
+.cc-facts-col dt { color: #6b6b6b; }
+.cc-facts-col dd { text-align: right; color: #333; }
+
+.cc-market {
+	font-size: 16px;
+	line-height: 1.6;
+	border-left: 3px solid #dfe8ee;
+	padding: 2px 0 2px 14px;
+	margin: 16px 0;
+	color: #444;
+}
+
+.cc-faq h3 {
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	margin: 16px 0 2px;
+}
+
+/* Pair grid */
+
+.cc-pairgrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+	gap: 8px;
+	margin: 10px 0 22px;
+}
+
+.cc-pairgrid a {
+	display: block;
+	padding: 9px 12px;
+	border: 1px solid #e4edf2;
+	border-radius: 8px;
+	text-decoration: none;
+	font-style: normal;
+	background: #fff;
+}
+
+.cc-pairgrid a:hover { border-color: #b7cbd8; background: #f8fbfc; text-decoration: none; }
+
+.cc-pairgrid li { line-height: 1.35; }
+.cc-pair-code { display: block; font-size: 14px; font-weight: 500; color: #2a6f96; }
+.cc-pair-name { display: block; font-size: 12px; color: #6b6b6b; }
+
+.cc-langlist {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 10px 0 4px;
+}
+
+.cc-langlist li { font-size: 15px; line-height: 1.8; }
+.cc-langlist li + li:before { content: "·"; margin: 0 9px; color: #c0c0c0; }
+.cc-langlist a { text-decoration: none; font-style: normal; }
+.cc-langlist a:hover { text-decoration: underline; }
+.cc-langlist i { font-style: normal; margin-right: 5px; }
+
+.cc-codes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin: 8px 0 20px;
+}
+
+.cc-codes li { font-size: 12px; }
+
+.cc-codes abbr, .cc-codes li {
+	text-decoration: none;
+	border: 1px solid #eceff1;
+	border-radius: 4px;
+	padding: 2px 5px;
+	color: #666;
+}
+
+/* Screenshots */
+
+.cc-shots {
+	display: flex;
+	gap: 10px;
+	margin: 18px 0 22px;
+	overflow-x: auto;
+}
+
+.cc-shots li { flex: 1 1 0; min-width: 150px; }
+.cc-shots img { display: block; width: 100%; height: auto; border: 1px solid #e4edf2; border-radius: 8px; margin: 0; }
+
+.cc-shots figcaption {
+	font-size: 12px;
+	color: #6b6b6b;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.cc-note {
+	width: auto;
+	margin: 30px 0 0;
+	padding: 14px 0 0;
+	border-top: 1px solid #eee;
+	text-align: center;
+}
+
+.cc-note p {
+	font-size: 13px;
+	line-height: 1.7;
+	color: #6b6b6b;
+	margin: 0;
+	max-width: none;
+}
+
+.cc-note a { color: #6b6b6b; font-style: normal; text-decoration: none; }
+.cc-note a:hover { text-decoration: underline; }
+
+/* RTL */
+
+[dir="rtl"] .cc-langs-toggle nav { right: auto; left: 0; }
+[dir="rtl"] .cc-facts-col dd { text-align: left; }
+[dir="rtl"] .cc-features li, [dir="rtl"] .cc-corridor li, [dir="rtl"] .cc-howto li {
+	margin-left: 0;
+	margin-right: 24px;
+}
+[dir="rtl"] .cc-market { border-left: 0; border-right: 3px solid #dfe8ee; padding: 2px 14px 2px 0; }
+
+@media only screen and (max-width: 600px) {
+	.cc-shots { display: block; }
+	.cc-shots li { margin-bottom: 14px; }
+	.cc-shots img { max-width: 260px; margin: 0 auto; }
 }
