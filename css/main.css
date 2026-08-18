@@ -441,6 +441,7 @@ blockquote {
 
 .screen{
 	height: 390px;
+	width: auto;
 	margin-right: 8px;
 	display: inline;
 }
@@ -949,8 +950,70 @@ i.icon-store.ios{
 .app-cards,
 .app-cards *,
 .app-cards *:before,
-.app-cards *:after {
+.app-cards *:after,
+.app-filter,
+.app-filter *,
+.app-stores,
+.app-stores * {
 	box-sizing: border-box;
+}
+
+/* Shipped with `hidden` in the markup and revealed by default.js, so it is
+   never on screen as a control that cannot filter anything. */
+.app-filter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 22px 0 -2px;
+}
+
+.app-filter[hidden] {
+	display: none;
+}
+
+.app-filter-label {
+	font-size: 12px;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	color: #777;
+}
+
+.app-filter-btn {
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #3d3d3d;
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	border-radius: 16px;
+	padding: 5px 15px;
+	cursor: pointer;
+	transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.app-filter-btn:hover {
+	border-color: #c9d6dd;
+	background: #f4f9fb;
+}
+
+.app-filter-btn.is-on {
+	background: #2c6482;
+	border-color: #2c6482;
+	color: #fff;
+}
+
+.app-filter-count {
+	font-size: 13.5px;
+	color: #7b7b7b;
+}
+
+.app-filter-btn.is-on .app-filter-count {
+	color: #b9d3e2;
+}
+
+.app-card[hidden] {
+	display: none;
 }
 
 .app-cards {
@@ -1032,52 +1095,111 @@ i.icon-store.ios{
 }
 
 /*
- * Official store artwork, used as supplied.
+ * Store badge row, rendered by _includes/store-badges.html on the home page and
+ * on every currency page.
  *
- * The two badges cannot share a height. Google ships its badge with the clear
- * space baked into the image — 646x250 of which only 564x168 is ink, so 67.2%
- * — while Apple's SVG is all ink at 120x40. Rendered at the same height the
- * Google button looks a third smaller. 68px against 46px makes the two visible
- * buttons the same size, which is what both guidelines actually ask for.
+ * Official artwork, used as supplied. The badges cannot share a height: Google
+ * ships its badge with the clear space baked into the image — 646x250 of which
+ * only 564x168 is ink, so 67.2% — while Apple's SVG is all ink at 120x40.
+ * Rendered at the same height the Google button looks a third smaller. 68px
+ * against 46px makes the visible buttons the same size, which is what both
+ * guidelines ask for.
  */
-.app-badges {
+.store-badges {
 	list-style: none;
 	margin: 14px 0 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 4px;
+	gap: 8px 12px;
 }
 
-.app-badges li {
+.store-badges-center {
+	justify-content: center;
 	margin: 0;
 }
 
-.app-badges a {
+.store-badges li {
+	margin: 0;
+	line-height: 0;
+}
+
+.store-badges a {
 	display: block;
 }
 
-.app-badges a:hover {
+.store-badges a:hover {
 	opacity: .85;
 }
 
-.app-badges a:after {
+.store-badges a:after {
 	content: none !important;
 }
 
-.app-badges img {
+.store-badges img {
 	display: block;
 	width: auto;
+	border: 0;
 }
 
-.app-badges .badge-google img {
+.store-badge-google img {
 	height: 68px;
 }
 
-.app-badges .badge-apple img {
+/* Google bakes its clear space into the artwork — 41 of 250 vertically, 41 of
+   646 on each side, so 11px all round once drawn at this size. Cancelling it
+   is what leaves every button the same 46px of visible ink, the same 12px
+   between each pair, and the first one flush with the text beside it. */
+.store-badges .store-badge-google {
+	margin: -11px;
+}
+
+.store-badge-apple img,
+.store-badge-samsung img {
 	height: 46px;
-	margin: 0 11px;
+}
+
+/*
+ * Huawei only hands its badge out through AppGallery Connect, so this one is
+ * the site's own button — the AppGallery mark and the same 46px silhouette as
+ * the three official badges beside it.
+ */
+.store-badges .store-badge-huawei a,
+.store-badges .store-badge-huawei a:visited {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 46px;
+	padding: 0 13px;
+	border-radius: 7px;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.store-badges .store-badge-huawei a:hover {
+	text-decoration: none;
+}
+
+.store-badges .store-badge-huawei svg {
+	flex: none;
+}
+
+.store-badge-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.15;
+}
+
+.store-badge-text span {
+	font-size: 9.5px;
+	letter-spacing: .02em;
+}
+
+.store-badge-text strong {
+	font-size: 17px;
+	font-weight: 500;
 }
 
 /*
@@ -1290,9 +1412,15 @@ i.icon-store.ios{
 }
 
 @media only screen and (max-width: 600px) {
-	.app-cards {
+	.app-cards,
+	.app-filter,
+	.app-stores {
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+
+	.app-stores {
+		grid-template-columns: 1fr;
 	}
 
 	.app-card {
@@ -1313,6 +1441,142 @@ i.icon-store.ios{
 		flex-direction: column;
 		align-items: flex-start;
 	}
+}
+
+/*
+ * The two store pages that list every app, under the cards. Same row grammar as
+ * .app-pro inside a card — tag, title, one-line reason, arrow — so they read as
+ * the level above the cards rather than as a footnote under them.
+ */
+.app-stores {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.app-stores li {
+	margin: 0;
+}
+
+.app-stores a,
+.app-stores a:visited {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	height: 100%;
+	padding: 13px 15px;
+	border-radius: 10px;
+	color: #fff;
+	text-decoration: none;
+	transition: background-color .15s ease, box-shadow .15s ease;
+}
+
+/* Each store's own colour. Both are dark enough for white body text — 4.5:1 or
+   better — which the lighter brand blues and greens are not. */
+.app-stores-play,
+.app-stores-play:visited {
+	background: #01875f;
+}
+
+.app-stores-play:hover {
+	background: #016b4b;
+}
+
+.app-stores-apple,
+.app-stores-apple:visited {
+	background: #0071e3;
+}
+
+.app-stores-apple:hover {
+	background: #005cbf;
+}
+
+.app-stores a:hover {
+	box-shadow: 0 4px 18px rgba(0,0,0,.14);
+	text-decoration: none;
+}
+
+.app-stores a:after {
+	content: none !important;
+}
+
+/* Brand glyphs, drawn in currentColor so they stay white on the button. */
+.app-stores-logo {
+	flex: none;
+	display: block;
+}
+
+.app-stores-text {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.app-stores-text strong {
+	font-size: 15px;
+	font-weight: 500;
+	color: inherit;
+}
+
+.app-stores-text span {
+	font-size: 13px;
+	line-height: 1.45;
+	color: inherit;
+}
+
+.app-stores-go {
+	flex: none;
+	margin-left: auto;
+	font-size: 16px;
+	transition: transform .15s ease;
+}
+
+.app-stores a:hover .app-stores-go {
+	transform: translateX(3px);
+}
+
+/*****************************************************************************/
+/*
+/* Privacy policies and terms of use (/android/**, /ios/**)
+/*
+/*****************************************************************************/
+
+/*
+ * The documents are a stack of bare <div>s, so without this they inherit the
+ * 13px body size the theme sets for its own widgets — unreadable for pages
+ * that are several thousand words of legal text.
+ */
+.legal {
+	font-size: 15px;
+	line-height: 1.7;
+	color: #3d3d3d;
+}
+
+.legal > div {
+	max-width: 74ch;
+	margin: 0 0 18px;
+}
+
+/* The theme underlines every h3; here they are the article headings. */
+.legal h3 {
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #333;
+	margin: 22px 0 6px;
+}
+
+.legal a,
+.legal a:visited {
+	color: #2a6f96;
+}
+
+.legal p {
+	font-size: 15px;
+	max-width: 74ch;
 }
 
 /*****************************************************************************/
@@ -1473,20 +1737,6 @@ i.icon-store.ios{
 	padding: 0;
 }
 
-.cc-badges {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	gap: 4px 14px;
-	margin: 0;
-}
-
-.cc-badges li { line-height: 0; }
-.cc-badges img { display: block; border: 0; }
-/* Google ships ~67% ink inside its badge, Apple ships none. */
-.cc-badges li:first-child img { margin: 0 -6px; }
-
 .cc-editions {
 	margin: 14px auto 0;
 	border-top: 1px solid #e4edf2;
@@ -1586,12 +1836,33 @@ i.icon-store.ios{
 
 .cc-pairgrid a {
 	display: block;
+	position: relative;
 	padding: 9px 12px;
+	padding-inline-end: 28px;
 	border: 1px solid #e4edf2;
 	border-radius: 8px;
 	text-decoration: none;
 	font-style: normal;
 	background: #fff;
+}
+
+/* Absolute rather than a flex item: the two lines inside the link are block
+   spans, and a flex row would sit them side by side. */
+.cc-pairgrid a:after {
+	content: "\2192";
+	position: absolute;
+	inset-inline-end: 11px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #9db8c7;
+	font-size: 15px;
+	line-height: 1;
+	transition: transform .15s ease, color .15s ease;
+}
+
+.cc-pairgrid a:hover:after {
+	color: #2a6f96;
+	transform: translateY(-50%) translateX(2px);
 }
 
 .cc-pairgrid a:hover { border-color: #b7cbd8; background: #f8fbfc; text-decoration: none; }
@@ -1671,6 +1942,8 @@ i.icon-store.ios{
 /* RTL */
 
 [dir="rtl"] .cc-langs-toggle nav { right: auto; left: 0; }
+[dir="rtl"] .cc-pairgrid a:after { content: "\2190"; }
+[dir="rtl"] .cc-pairgrid a:hover:after { transform: translateY(-50%) translateX(-2px); }
 [dir="rtl"] .cc-facts-col dd { text-align: left; }
 [dir="rtl"] .cc-features li, [dir="rtl"] .cc-corridor li, [dir="rtl"] .cc-howto li {
 	margin-left: 0;

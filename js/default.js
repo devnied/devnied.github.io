@@ -55,6 +55,39 @@ $(function(){
     }
 
 
+    // Platform filter (home page)
+    var filter = $(".app-filter");
+    if ( filter.length ){
+    	var cards = $(".app-card");
+
+    	function runsOn(card, platform){
+    		return platform === "all" ||
+    			String($(card).data("platform")).split(" ").indexOf(platform) !== -1;
+    	}
+
+    	// The counts ship in the markup so a crawler reads them; this only keeps
+    	// them honest if a card is added and the number is not.
+    	filter.find(".app-filter-btn").each(function(){
+    		var platform = $(this).data("platform");
+    		var count = cards.filter(function(){ return runsOn(this, platform); }).length;
+    		$(this).find(".app-filter-count").text(count);
+    	});
+
+    	filter.removeAttr("hidden");
+
+    	filter.on("click", ".app-filter-btn", function(){
+    		var platform = $(this).data("platform");
+
+    		filter.find(".app-filter-btn").removeClass("is-on").attr("aria-pressed", "false");
+    		$(this).addClass("is-on").attr("aria-pressed", "true");
+
+    		cards.each(function(){
+    			$(this).prop("hidden", !runsOn(this, platform));
+    		});
+    	});
+    }
+
+
     // Tag page
     if (window.location.pathname.match("^/tag/") ){
 			$("h1").html("TAG " + htmlEncode(window.location.hash));

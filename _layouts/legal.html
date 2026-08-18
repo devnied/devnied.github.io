@@ -1,0 +1,58 @@
+{%- comment -%}
+  The privacy policies and terms of use. They were 26 standalone documents,
+  each carrying its own <!doctype>, <head> and <title>, so they had no nav, no
+  footer and no stylesheet — and a change to the site chrome never reached
+  them. They keep their own URLs, which are registered in the app stores.
+
+  `stem` is the path without its `-xx.html` suffix, which is what every
+  translation of the same document shares. Both the hreflang cluster and the
+  redirect below are built from the files that actually exist, so adding
+  `-de.html` to the folder is all it takes to publish a German edition.
+{%- endcomment -%}
+{%- assign stem_size = page.path | size | minus: 8 -%}
+{%- assign stem = page.path | slice: 0, stem_size -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.direction | default: 'ltr' }}">
+    <head>
+        {% include header.html %}
+        {%- for doc in site.pages %}{% if doc.path contains stem %}
+        <link rel="alternate" hreflang="{{ doc.lang }}" href="{{ doc.url | absolute_url }}">
+        {%- if doc.lang == 'en' %}
+        <link rel="alternate" hreflang="x-default" href="{{ doc.url | absolute_url }}">
+        {%- endif %}{% endif %}{% endfor %}
+        <script>
+        (function () {
+            var here = (document.documentElement.lang || "").toLowerCase().split("-")[0];
+            var links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+            var pages = {};
+            for (var i = 0; i < links.length; i++) {
+                var lang = links[i].hreflang.toLowerCase().split("-")[0];
+                if (lang !== "x") pages[lang] = links[i].href;
+            }
+            var wanted;
+            try {
+                var asked = location.search.match(/[?&]lang=([a-zA-Z]{2})/);
+                if (asked) sessionStorage.setItem("legalLang", asked[1].toLowerCase());
+                var forced = sessionStorage.getItem("legalLang");
+                wanted = forced ? [forced] : (navigator.languages || [navigator.language || ""]);
+            } catch (e) {
+                wanted = navigator.languages || [navigator.language || ""];
+            }
+            for (var j = 0; j < wanted.length; j++) {
+                var code = String(wanted[j]).toLowerCase().split("-")[0];
+                if (!pages[code]) continue;
+                if (code !== here) location.replace(pages[code]);
+                return;
+            }
+        })();
+        </script>
+    </head>
+    <body>
+        {% include nav.html %}
+        <main class="container legal">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </body>
+</html>

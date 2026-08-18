@@ -31,11 +31,6 @@
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
 {%- endfor -%}
-{%- comment -%}
-  The privacy and terms pages under android/ and ios/ are plain HTML with no
-  front matter, so Jekyll copies them verbatim and they are static files, not
-  pages. Without this loop they would silently drop out of the sitemap.
-{%- endcomment -%}
 {%- for file in site.static_files %}
 {%- if file.extname == '.html' %}
   <url>

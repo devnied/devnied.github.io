@@ -9,31 +9,42 @@ desc: Currency converter Android application with over 180 currencies, widget, u
 ---
 <img class="icon-app" src="/images/currency-converter/icon-pro.png"/>
 
-Currency Converter is an mobile application used to get world's foreign currencies conversion rates.
+Currency Converter is an Android application used to get world's foreign currencies conversion rates.
 The full product page, with every supported currency pair, lives at [Currency Converter &amp; Exchange](/currency-converter/).
-It provided over 180 currencies with exchange rates and also support offline mode, so it's an ideal ideal companion for your trip abroad.
-This app is easy to use with it's material design for conversion of many foreign currencies directly with the app or from the widget.
+It converts between 180+ currencies with live exchange rates and keeps working offline from the last saved rates,
+so it's an ideal companion for your trip abroad.
+This app is easy to use for conversion of many foreign currencies directly in the app or from the widget.
 Add your personal favorite currency list.
 
 ## Functionalities
 
-★ Material design<br/>
-★ Quick updates<br/>
-★ Updated exchange rates<br/>
-★ 180+ world currencies<br/>
-★ Convert multiple currencies<br/>
-★ Bitcoin support<br/>
-★ Materials currencies (Gold, Silver, Platinum, palladium)<br/>
+★ 180+ world currencies — USD, EUR, GBP, JPY, CAD, AUD, CHF and more<br/>
+★ 20+ cryptocurrencies — Bitcoin (BTC), Ethereum (ETH) and more<br/>
+★ Precious metals (gold, silver, platinum, palladium)<br/>
+★ Live exchange rates, refreshed several times a day<br/>
 ★ Offline mode (no roaming fees)<br/>
-★ Search function to quickly add a new currency<br/>
+★ Convert multiple currencies at once, with your own favorites<br/>
 ★ Historic graphs (1 day - 5 years)<br/>
+★ Search by country name, currency name or ISO code<br/>
+★ Adjustable decimal places and one-tap copy of the result<br/>
+★ Dark mode<br/>
+★ No account, no sign-in, no personal data collected<br/>
 
 ## Screens
 
 <div class="screen-container">
-    <img class="screen" src="/images/currency-converter/screen1.png"/>
-    <img class="screen" src="/images/currency-converter/screen2.png"/>
-    <img class="screen" src="/images/currency-converter/screen3.png"/>
+    <picture>
+        <source srcset="/images/currency-converter/screens/en/home.avif" type="image/avif">
+        <img class="screen" src="/images/currency-converter/screens/en/home.jpg" width="420" height="933" alt="Currency Converter — Home screen: one US dollar converted to euro, above the favourite currencies" loading="lazy"/>
+    </picture>
+    <picture>
+        <source srcset="/images/currency-converter/screens/en/chart.avif" type="image/avif">
+        <img class="screen" src="/images/currency-converter/screens/en/chart.jpg" width="420" height="933" alt="Currency Converter — Historical chart of the USD to EUR rate, from one day to five years" loading="lazy"/>
+    </picture>
+    <picture>
+        <source srcset="/images/currency-converter/screens/en/select.avif" type="image/avif">
+        <img class="screen" src="/images/currency-converter/screens/en/select.jpg" width="420" height="933" alt="Currency Converter — Currency picker, searchable by currency name, country or ISO code" loading="lazy"/>
+    </picture>
 </div>
 
 ## Links
@@ -45,19 +56,19 @@ Add your personal favorite currency list.
         </div>
         <div class="price">
             <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.free" target="_blank" class="no-icon" alt="Download free version">
-                <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+                <img src="/images/badges/en/google-play.png" alt="" width="176" height="68">
             </a>
             <span>Free version</span>
         </div>
         <ul class="package">
             <ul>
-                <li>Material design</li>
-                <li>Quick updates</li>
-                <li>Updated exchange rates</li>
                 <li>180+ world currencies</li>
-                <li>Bitcoin support</li>
+                <li>20+ cryptocurrencies</li>
+                <li>Live exchange rates</li>
                 <li>Offline mode</li>
-                <li>Search function</li>
+                <li>Charts from 1 day to 5 years</li>
+                <li>Favorites and search</li>
+                <li>Dark mode</li>
                 <li>
                    <div class="app-doc">
                         <a href="/android/currency-converter-cgu-en.html" target="_blank">Terms of Use</a>
@@ -73,20 +84,21 @@ Add your personal favorite currency list.
             </div>
             <div class="price">
                 <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.pro" target="_blank" class="no-icon" alt="Download pro version">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+                    <img src="/images/badges/en/google-play.png" alt="" width="176" height="68">
                 </a>
                 <span>Pro version</span>
             </div>
             <ul class="package">
                 <ul>
                     <li><b>No ads</b></li>
-                    <li>Material design</li>
-                    <li>Quick updates</li>
-                    <li>Updated exchange rates</li>
+                    <li><b>Customizable home-screen widget</b></li>
                     <li>180+ world currencies</li>
-                    <li>Bitcoin support</li>
+                    <li>20+ cryptocurrencies</li>
+                    <li>Live exchange rates</li>
                     <li>Offline mode</li>
-                    <li>Search function</li>
+                    <li>Charts from 1 day to 5 years</li>
+                    <li>Favorites and search</li>
+                    <li>Dark mode</li>
                     <li>
                        <div class="app-doc">
                             <a href="/android/currency-converter-pro-cgu-en.html" target="_blank">Terms of Use</a>

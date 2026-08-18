@@ -69,6 +69,14 @@ const SITE = {
      * without a `pt` is not recorded by Apple, so emitting one is noise.
      */
     appleProviderToken: '',
+    /**
+     * Samsung and Huawei hand out a whole link rather than an id — the Samsung
+     * one carries the attribution of its own badge tool — so they are stored
+     * as written instead of being reassembled from parts.
+     */
+    samsungUrl: 'https://apps.samsung.com/appquery/appDetail.as?appId=com.devnied.currency.free'
+      + '&source=GBadge_01_4906417_tag&directOpen=true&ads=ddb0e6f9&nonOrgType=fce692ba',
+    huaweiUrl: 'https://appgallery.huawei.com/app/C100369321',
   },
 
   /** Languages the app itself ships in — quoted in JSON-LD. */
@@ -800,6 +808,11 @@ function visibleText(html) {
     .replace(/<script[\s\S]*?<\/script>/g, ' ')
     .replace(/<style[\s\S]*?<\/style>/g, ' ')
     .replace(/<head>[\s\S]*?<\/head>/g, ' ')
+    // Liquid tags render to markup, not to prose. Left in, an {% include %} and
+    // its parameters would count as body text and inflate every similarity
+    // score with boilerplate no reader ever sees.
+    .replace(/\{%[\s\S]*?%\}/g, ' ')
+    .replace(/\{\{[\s\S]*?\}\}/g, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
@@ -9530,7 +9543,20 @@ function storeUrls(locale, campaign) {
   if (locale.appleL) q.push(`l=${locale.appleL}`)
   if (q.length) apple += `?${q.join('&')}`
 
-  return { play, apple }
+  return { play, apple, samsung: SITE.stores.samsungUrl, huawei: SITE.stores.huaweiUrl }
+}
+
+/**
+ * Alt text for the two stores that have no translated copy of their own. Every
+ * locale writes its Play badge label around the literal "Google Play", so the
+ * store name is the only part that changes.
+ */
+function badgeAlt(copy, ctx, store) {
+  const template = copy.ui.playBadge
+  if (!template.includes('Google Play')) {
+    throw new Error(`playBadge for this locale no longer names Google Play: ${template}`)
+  }
+  return t(template.replace('Google Play', store), ctx)
 }
 
 /**
@@ -9538,16 +9564,30 @@ function storeUrls(locale, campaign) {
  * (67% ink), Apple's carries none, so 68 against 46 renders as two equal buttons.
  */
 function ctaBlock(locale, copy, ctx, campaign, extra = '') {
-  const { play, apple } = storeUrls(locale, campaign)
-  const badges = `/images/badges/${locale.code}`
+  const { play, apple, samsung, huawei } = storeUrls(locale, campaign)
+  // Values reach the include raw: it escapes them, and escaping twice would put
+  // `&amp;amp;` in every store link.
+  const param = (name, value) => {
+    if (value.includes('"')) throw new Error(`include parameter ${name} contains a quote: ${value}`)
+    return `${name}="${value}"`
+  }
+  const badges = [
+    param('dir', `/images/badges/${locale.code}`),
+    param('center', 'true'),
+    param('play', play),
+    param('play_alt', t(copy.ui.playBadge, ctx)),
+    param('apple', apple),
+    param('apple_alt', t(copy.ui.appleBadge, ctx)),
+    param('samsung', samsung),
+    param('samsung_alt', badgeAlt(copy, ctx, 'Galaxy Store')),
+    param('huawei', huawei),
+    param('huawei_alt', badgeAlt(copy, ctx, 'AppGallery')),
+  ].join(' ')
   return `<div class="cc-cta">
 <img class="cc-cta-icon" src="/images/currency-converter/icon-pro.png" alt="" width="72" height="72" loading="lazy" decoding="async">
 <div class="cc-cta-body">
 <p class="cc-cta-title">${esc(t(copy.ui.getTheApp, ctx))}</p>
-<ul class="cc-badges">
-<li><a href="${esc(play)}" target="_blank" rel="noopener"><img src="${badges}/google-play.png" alt="${esc(t(copy.ui.playBadge, ctx))}" width="176" height="68" loading="lazy" decoding="async"></a></li>
-<li><a href="${esc(apple)}" target="_blank" rel="noopener"><img src="${badges}/app-store.svg" alt="${esc(t(copy.ui.appleBadge, ctx))}" width="138" height="46" loading="lazy" decoding="async"></a></li>
-</ul>
+{% include store-badges.html ${badges} %}
 ${extra}
 </div>
 </div>`
@@ -9573,10 +9613,19 @@ function screenshots(locale, copy, ctx) {
   return `<ul class="cc-shots">\n${items}\n</ul>`
 }
 
+/**
+ * Editions whose legal pages are translated. Every other edition points at the
+ * English pair — a link to a page nobody can read is worse than a link in a
+ * second language, and these documents are only added by hand.
+ */
+const LEGAL_LOCALES = ['fr', 'zh']
+
 function pageNote(locale, copy, ctx, extra = '') {
-  const legal = locale.code === 'fr'
-    ? { privacy: '/android/currency-converter-privacy-fr.html', terms: '/android/currency-converter-cgu-fr.html' }
-    : { privacy: '/android/currency-converter-privacy-en.html', terms: '/android/currency-converter-cgu-en.html' }
+  const lang = LEGAL_LOCALES.includes(locale.code) ? locale.code : 'en'
+  const legal = {
+    privacy: `/android/currency-converter-privacy-${lang}.html`,
+    terms: `/android/currency-converter-cgu-${lang}.html`,
+  }
   // <div>, not <footer>: the theme styles the bare `footer` element (centred,
   // 700px, 40px padding) and there is already one page-level footer.
   return `<div class="cc-note">
@@ -10522,8 +10571,12 @@ for (const page of pages) {
 
   // --- Liquid safety ------------------------------------------------------
   // Jekyll renders these files through Liquid; a stray {{ or {% would either
-  // blow up the build or silently delete content.
-  if (/\{\{|\{%/.test(html)) fail(rel, 'output contains Liquid delimiters ({{ or {%)')
+  // blow up the build or silently delete content. The one tag the generator
+  // writes on purpose is the shared store-badge include, so it is counted out
+  // rather than the whole check being dropped.
+  const delimiters = (html.match(/\{\{|\{%/g) || []).length
+  const includes = (html.match(/\{% include store-badges\.html [\s\S]*?%\}/g) || []).length
+  if (delimiters !== includes) fail(rel, 'output contains Liquid delimiters ({{ or {%)')
 
   // These pages are Jekyll content, so <html>, <head> and the nav come from
   // _layouts/default.html. What the page still owns is its front matter.
