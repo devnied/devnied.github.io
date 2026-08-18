@@ -7,7 +7,7 @@ img: /images/currency-converter/cover.jpg
 tags: Android Currency Converter Apps
 desc: Currency converter Android application with over 180 currencies, widget, updated conversion rates and offline mode.
 ---
-<img class="icon-app" src="/images/currency-converter/icon-pro.png"/>
+<img class="icon-app" alt="Currency Converter app icon" src="/images/currency-converter/icon-pro.png"/>
 
 Currency Converter is an Android application used to get world's foreign currencies conversion rates.
 The full product page, with every supported currency pair, lives at [Currency Converter &amp; Exchange](/currency-converter/).
@@ -52,11 +52,11 @@ Add your personal favorite currency list.
 <div class="app-version container-twelve">
     <div class="pricing-table package-three six columns ">
         <div class="title">
-            <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27">
+                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="Android" width="150" height="27" >
         </div>
         <div class="price">
             <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.free" target="_blank" class="no-icon" alt="Download free version">
-                <img src="/images/badges/en/google-play.png" alt="" width="176" height="68">
+                    <img src="/images/badges/en/google-play.png" alt="Currency Converter on Google Play" width="176" height="68" loading="lazy">
             </a>
             <span>Free version</span>
         </div>
@@ -71,8 +71,8 @@ Add your personal favorite currency list.
                 <li>Dark mode</li>
                 <li>
                    <div class="app-doc">
-                        <a href="/android/currency-converter-cgu-en.html" target="_blank">Terms of Use</a>
-                        <a href="/android/currency-converter-privacy-en.html" target="_blank">App Privacy Policy</a>
+                        <a href="/android/currency-converter-cgu-en.html" target="_blank" aria-label="Terms of Use — Currency Converter Free">Terms of Use</a>
+                        <a href="/android/currency-converter-privacy-en.html" target="_blank" aria-label="App Privacy Policy — Currency Converter Free">App Privacy Policy</a>
                     </div>
                 </li>
             </ul>
@@ -80,11 +80,11 @@ Add your personal favorite currency list.
     </div>
     <div class="pricing-table package-one six columns">
             <div class="title">
-                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27" >
+                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="Android" width="150" height="27" >
             </div>
             <div class="price">
                 <a href="https://play.google.com/store/apps/details?id=com.devnied.currency.pro" target="_blank" class="no-icon" alt="Download pro version">
-                    <img src="/images/badges/en/google-play.png" alt="" width="176" height="68">
+                    <img src="/images/badges/en/google-play.png" alt="Currency Converter Pro on Google Play" width="176" height="68">
                 </a>
                 <span>Pro version</span>
             </div>
@@ -101,8 +101,8 @@ Add your personal favorite currency list.
                     <li>Dark mode</li>
                     <li>
                        <div class="app-doc">
-                            <a href="/android/currency-converter-pro-cgu-en.html" target="_blank">Terms of Use</a>
-                            <a href="/android/currency-converter-pro-privacy-en.html" target="_blank">App Privacy Policy</a>
+                            <a href="/android/currency-converter-pro-cgu-en.html" target="_blank" aria-label="Terms of Use — Currency Converter Pro">Terms of Use</a>
+                            <a href="/android/currency-converter-pro-privacy-en.html" target="_blank" aria-label="App Privacy Policy — Currency Converter Pro">App Privacy Policy</a>
                         </div>
                     </li>
                 </ul>

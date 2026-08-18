@@ -7,7 +7,7 @@ img: /images/currency-converter/cover.jpg
 tags: iOS Currency Converter Apps
 desc: Currency converter iOS application with over 180 currencies, widget, updated conversion rates and offline mode.
 ---
-<img class="icon-app" src="/images/currency-converter/icon.png"/>
+<img class="icon-app" alt="Currency Converter app icon" src="/images/currency-converter/icon.png"/>
 
 Currency Converter is a mobile application used to get world's foreign currencies conversion rates.
 The full product page, with every supported currency pair, lives at [Currency Converter &amp; Exchange](/currency-converter/).
@@ -33,7 +33,7 @@ Add your personal favorite currency list.
     <div class="pricing-table package-three twelve columns ">
             <div class="price">
                 <a href="https://apps.apple.com/us/app/currency-converter-rates-pro/id6760141868" target="_blank" class="no-icon" alt="Download app">
-                    <img src="https://toolbox.marketingtools.apple.com/api/assets/featured-content/apps/badges/badge-2/en-us.svg" alt="" width="170">
+                    <img src="https://toolbox.marketingtools.apple.com/api/assets/featured-content/apps/badges/badge-2/en-us.svg" alt="Currency Converter &amp; Rates Pro on the App Store" width="170">
                 </a>
                 <span>Free version</span>
             </div>
@@ -46,8 +46,8 @@ Add your personal favorite currency list.
                 <li>Widget support</li>
                 <li>
                    <div class="app-doc">
-                        <a href="/ios/currency-converter-cgu-en.html" target="_blank">Terms of Use</a>
-                        <a href="/ios/currency-converter-privacy-en.html" target="_blank">App Privacy Policy</a>
+                        <a href="/ios/currency-converter-cgu-en.html" target="_blank" aria-label="Terms of Use — Currency Converter for iOS">Terms of Use</a>
+                        <a href="/ios/currency-converter-privacy-en.html" target="_blank" aria-label="App Privacy Policy — Currency Converter for iOS">App Privacy Policy</a>
                     </div>
                 </li>
             </ul>

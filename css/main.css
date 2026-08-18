@@ -40,6 +40,20 @@ html, body {
 	height: 100%;
 }
 
+/* Off screen for the eye, still in the accessibility tree: carries the app
+   name inside the AppGallery link, which is otherwise unnamed. */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
 body {
   background-color: #FFF;
   font-family: 'Roboto', sans-serif;
@@ -1098,12 +1112,12 @@ i.icon-store.ios{
  * Store badge row, rendered by _includes/store-badges.html on the home page and
  * on every currency page.
  *
- * Official artwork, used as supplied. The badges cannot share a height: Google
- * ships its badge with the clear space baked into the image — 646x250 of which
- * only 564x168 is ink, so 67.2% — while Apple's SVG is all ink at 120x40.
- * Rendered at the same height the Google button looks a third smaller. 68px
- * against 46px makes the visible buttons the same size, which is what both
- * guidelines ask for.
+ * Official artwork. Google bakes a transparent margin into its badge and not
+ * the same one in every language — the English file carries 41px on each side,
+ * the French none horizontally — so the buttons came out different heights from
+ * one edition to the next. `node tools/build.mjs badges` now trims each file to
+ * its visible pixels on import, which is what lets a single height line all
+ * four up; the clear space the store guidelines ask for is the 12px gap.
  */
 .store-badges {
 	list-style: none;
@@ -1140,24 +1154,8 @@ i.icon-store.ios{
 .store-badges img {
 	display: block;
 	width: auto;
-	border: 0;
-}
-
-.store-badge-google img {
-	height: 68px;
-}
-
-/* Google bakes its clear space into the artwork — 41 of 250 vertically, 41 of
-   646 on each side, so 11px all round once drawn at this size. Cancelling it
-   is what leaves every button the same 46px of visible ink, the same 12px
-   between each pair, and the first one flush with the text beside it. */
-.store-badges .store-badge-google {
-	margin: -11px;
-}
-
-.store-badge-apple img,
-.store-badge-samsung img {
 	height: 46px;
+	border: 0;
 }
 
 /*

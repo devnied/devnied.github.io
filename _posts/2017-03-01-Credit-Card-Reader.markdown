@@ -7,7 +7,7 @@ img: /images/credit-card/cover.jpg
 tags: Android Apps EMV NFC
 desc: Credit Card Reader NFC app was made to read public data on an NFC banking card compliant with EMV norm.
 ---
-<img class="icon-app" src="/images/credit-card/icon-pro.png"/>
+<img class="icon-app" alt="Credit Card Reader NFC app icon" src="/images/credit-card/icon-pro.png"/>
 
 Credit Card Reader NFC is an mobile application made to read public data on an NFC banking card compliant with EMV norm.<br/>
 This application is an analysis tool to read contactless NFC EMV credit cards data.
@@ -50,9 +50,9 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
 ## Screens
 
 <div class="screen-container">
-    <img class="screen" src="/images/credit-card/screen1.png"/>
-    <img class="screen" src="/images/credit-card/screen2.png"/>
-    <img class="screen" src="/images/credit-card/screen3.png"/>
+    <img class="screen" src="/images/credit-card/screen1.png" alt="Credit Card Reader NFC: card details read over NFC" loading="lazy"/>
+    <img class="screen" src="/images/credit-card/screen2.png" alt="Credit Card Reader NFC: the card&rsquo;s transaction log" loading="lazy"/>
+    <img class="screen" src="/images/credit-card/screen3.png" alt="Credit Card Reader NFC: raw EMV data returned by the card" loading="lazy"/>
 </div>
 
 ## Links
@@ -60,11 +60,11 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
 <div class="app-version container-twelve">
     <div class="pricing-table package-three six columns ">
         <div class="title">
-            <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27">
+                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="Android" width="150" height="27" >
         </div>
         <div class="price">
             <a href="https://play.google.com/store/apps/details?id=com.github.devnied.emvnfccard" target="_blank" class="no-icon" alt="Download free version">
-                <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+                <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Credit Card Reader NFC on Google Play" width="170">
             </a>
             <span>Free version</span>
         </div>
@@ -75,8 +75,8 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
                 <li>Simple history</li>
                 <li>
                    <div class="app-doc">
-                        <a href="/android/credit-card-reader-cgu-en.html">App Legal Notices</a>
-                        <a href="/android/credit-card-reader-privacy-en.html">App Privacy Policy</a>
+                        <a href="/android/credit-card-reader-cgu-en.html" aria-label="App Legal Notices — Credit Card Reader NFC Free">App Legal Notices</a>
+                        <a href="/android/credit-card-reader-privacy-en.html" aria-label="App Privacy Policy — Credit Card Reader NFC Free">App Privacy Policy</a>
                     </div>
                 </li>
             </ul>
@@ -84,11 +84,11 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
     </div>
     <div class="pricing-table package-one six columns">
             <div class="title">
-                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="" width="150" height="27" >
+                <img style="margin-top: 5px;" src="/css/img/p_Android.png" alt="Android" width="150" height="27" >
             </div>
             <div class="price">
                 <a href="https://play.google.com/store/apps/details?id=com.github.devnied.emvnfccard.pro" target="_blank" class="no-icon" alt="Download pro version">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width="170">
+                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Credit Card Reader NFC Pro on Google Play" width="170">
                 </a>
                 <span>Pro version</span>
             </div>
@@ -103,8 +103,8 @@ This application is an analysis tool to read contactless NFC EMV credit cards da
                     <li>Disable application launch with NFC</li>
                     <li>
                        <div class="app-doc">
-                            <a href="/android/credit-card-reader-pro-cgu-en.html">App Legal Notices</a>
-                            <a href="/android/credit-card-reader-pro-privacy-en.html">App Privacy Policy</a>
+                            <a href="/android/credit-card-reader-pro-cgu-en.html" aria-label="App Legal Notices — Credit Card Reader NFC Pro">App Legal Notices</a>
+                            <a href="/android/credit-card-reader-pro-privacy-en.html" aria-label="App Privacy Policy — Credit Card Reader NFC Pro">App Privacy Policy</a>
                         </div>
                     </li>
                 </ul>
