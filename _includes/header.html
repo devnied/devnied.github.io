@@ -51,5 +51,7 @@
 {% if page.apple_app %}<meta name="apple-itunes-app" content="{{ page.apple_app }}">{% endif %}
 <!-- CSS -->
 <link href='https://fonts.googleapis.com/css?family=Roboto:100,900,400,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="/css/main.css?v=2">
-<link rel="stylesheet" href="/css/syntax.css">
+{% assign main_css = site.static_files | where: "path", "/css/main.css" | first %}
+{% assign syntax_css = site.static_files | where: "path", "/css/syntax.css" | first %}
+<link rel="stylesheet" href="/css/main.css?v={{ main_css.modified_time | date: '%s' }}">
+<link rel="stylesheet" href="/css/syntax.css?v={{ syntax_css.modified_time | date: '%s' }}">

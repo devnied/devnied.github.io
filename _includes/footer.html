@@ -2,4 +2,5 @@
 	 <a href="/">Julien Millau.fr</a>
 </footer>
 <!-- JS -->
-<script src="/js/default.js" defer></script>
+{% assign default_js = site.static_files | where: "path", "/js/default.js" | first %}
+<script src="/js/default.js?v={{ default_js.modified_time | date: '%s' }}" defer></script>
